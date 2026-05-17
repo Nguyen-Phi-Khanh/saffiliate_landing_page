@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-shopee-orange: #EE4D2D;
+  --color-shopee-orange-hover: #F05D40;
+  --color-shopee-orange-light: #FFEEEB;
+  --color-shopee-dark: #0F172A;
+  --color-shopee-dark-card: #1E293B;
+  --font-sans: 'Outfit', 'Inter', system-ui, sans-serif;
+}
+
+/* Global scrollbars and transitions */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: #F8FAFC; /* Light mode default */
+  color: #0F172A; /* Light mode default */
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark {
+  background-color: #090D16; /* Dark mode active */
+  color: #F8FAFC;
+}
+
+/* Custom premium transitions */
+.transition-premium {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Glassmorphism utility card */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85); /* Light mode default */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.03);
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.dark .glass-panel {
+  background: rgba(30, 41, 59, 0.7); /* Dark mode active */
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* Glow effects */
+.glow-orange {
+  box-shadow: 0 0 40px -10px rgba(238, 77, 45, 0.15);
+}
+
+.dark .glow-orange {
+  box-shadow: 0 0 40px -10px rgba(238, 77, 45, 0.3);
+}
+
+.glow-orange-button {
+  box-shadow: 0 4px 20px rgba(238, 77, 45, 0.25);
+}
+
+.glow-orange-button:hover {
+  box-shadow: 0 6px 30px rgba(238, 77, 45, 0.45);
+}
+
+.dark .glow-orange-button {
+  box-shadow: 0 4px 20px rgba(238, 77, 45, 0.4);
+}
+
+.dark .glow-orange-button:hover {
+  box-shadow: 0 6px 30px rgba(238, 77, 45, 0.6);
+}
+
+/* Animate skeleton pulse */
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-bg {
+  background: linear-gradient(90deg, rgba(226, 232, 240, 0.8) 25%, rgba(203, 213, 225, 0.9) 37%, rgba(226, 232, 240, 0.8) 63%);
+  background-size: 400% 100%;
+  animation: skeleton-shimmer 1.8s ease-in-out infinite;
+}
+
+.dark .shimmer-bg {
+  background: linear-gradient(90deg, rgba(30, 41, 59, 0.6) 25%, rgba(51, 65, 85, 0.7) 37%, rgba(30, 41, 59, 0.6) 63%);
+  background-size: 400% 100%;
+}
+
+/* Interactive focus glow */
+.input-focus-glow:focus {
+  outline: none;
+  border-color: #EE4D2D;
+  box-shadow: 0 0 15px rgba(238, 77, 45, 0.2);
+}
+
+.dark .input-focus-glow:focus {
+  box-shadow: 0 0 15px rgba(238, 77, 45, 0.25);
+}
+
+/* Fade up and slide animations */
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
