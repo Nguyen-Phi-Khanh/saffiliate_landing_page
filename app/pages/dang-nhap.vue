@@ -298,6 +298,10 @@ const handleGoogleLogin = async () => {
   errorMessage.value = "";
   isLoggingIn.value = true;
 
+  // Lấy đường dẫn chuyển hướng sau đăng nhập từ query parameters
+  const redirectPath = route.query.redirect || "/";
+  const safeRedirectPath = String(redirectPath).startsWith("/") ? redirectPath : `/${redirectPath}`;
+
   // Create a timeout promise to reject after 5 seconds if backend is unresponsive
   const timeoutPromise = new Promise((_, reject) =>
     setTimeout(() => reject(new Error("TIMEOUT")), 5000)
@@ -305,7 +309,7 @@ const handleGoogleLogin = async () => {
 
   const loginPromise = authClient.signIn.social({
     provider: "google",
-    callbackURL: typeof window !== 'undefined' ? window.location.origin + '/' : config.public.appURL
+    callbackURL: typeof window !== 'undefined' ? window.location.origin + safeRedirectPath : config.public.appURL + safeRedirectPath
   });
 
   try {

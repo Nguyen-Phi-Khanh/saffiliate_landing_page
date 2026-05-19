@@ -1,7 +1,7 @@
 import { ref } from "vue";
 
 export function useTheme() {
-  const isDark = ref(true); // Default to dark mode since it's the premium default
+  const isDark = useState("theme-is-dark", () => true); // Shared state globally across all components via Nuxt useState
 
   const toggleTheme = () => {
     isDark.value = !isDark.value;
