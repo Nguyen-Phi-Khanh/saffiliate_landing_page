@@ -47,7 +47,7 @@
         
         <!-- Logo Text -->
         <h1 class="font-sans text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white md:text-4xl transition-colors duration-400">
-          C<span class="text-shopee-orange">affiliate</span>
+          S<span class="text-shopee-orange">affiliate</span>
         </h1>
         <p class="text-2xs tracking-widest text-slate-500 dark:text-slate-400 uppercase font-bold mt-0.5 transition-colors duration-400">
           CASHBACK & AFFILIATE
