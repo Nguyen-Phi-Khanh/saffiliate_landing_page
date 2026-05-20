@@ -12,11 +12,8 @@ export default defineNuxtRouteMiddleware(async (to) => {
 		return navigateTo('/');
 	}
 
-	// 2. Nếu chưa đăng nhập mà truy cập các trang khác -> đưa về trang đăng nhập kèm trang redirect
+	// 2. Nếu chưa đăng nhập mà truy cập các trang khác -> đưa về trang đăng nhập
 	if (!session.value && !isAuthRoute) {
-		return navigateTo({
-			path: '/dang-nhap',
-			query: { redirect: to.fullPath },
-		});
+		return navigateTo('/dang-nhap');
 	}
 });

@@ -286,6 +286,10 @@ onMounted(() => {
     } else {
       errorMessage.value = "Có lỗi xảy ra trong quá trình xác thực đăng nhập. Vui lòng thử lại.";
     }
+
+    // Xóa tham số error khỏi URL để tránh hiển thị lại khi F5 (làm mới trang)
+    const router = useRouter();
+    router.replace({ query: { ...route.query, error: undefined } });
   }
 });
 
@@ -298,9 +302,8 @@ const handleGoogleLogin = async () => {
   errorMessage.value = "";
   isLoggingIn.value = true;
 
-  // Lấy đường dẫn chuyển hướng sau đăng nhập từ query parameters
-  const redirectPath = route.query.redirect || "/";
-  const safeRedirectPath = String(redirectPath).startsWith("/") ? redirectPath : `/${redirectPath}`;
+  // Luôn chuyển hướng người dùng về trang chủ sau khi đăng nhập thành công
+  const safeRedirectPath = "/";
 
   // Create a timeout promise to reject after 5 seconds if backend is unresponsive
   const timeoutPromise = new Promise((_, reject) =>

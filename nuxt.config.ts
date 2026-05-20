@@ -30,4 +30,11 @@ export default defineNuxtConfig({
       appURL: process.env.NUXT_PUBLIC_APP_URL
     },
   },
+
+  // for cloudflare pages
+  nitro:{
+    prerender: {
+      autoSubfolderIndex: false
+    }
+  }
 });
