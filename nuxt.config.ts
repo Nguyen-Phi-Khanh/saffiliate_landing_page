@@ -32,7 +32,7 @@ export default defineNuxtConfig({
   },
 
   // for cloudflare pages
-  nitro:{
+  nitro: {
     prerender: {
       autoSubfolderIndex: false
     }
