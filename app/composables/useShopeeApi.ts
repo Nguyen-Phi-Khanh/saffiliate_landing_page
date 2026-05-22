@@ -109,12 +109,13 @@ export function useShopeeApi() {
         productInfo.value = responseData.productInfo || null;
         return true;
       } else {
-        throw new Error(responseData.message || "Không thể lấy được link liên kết từ phản hồi API.");
+        throw new Error(responseData.message || "Không thể lấy được link từ máy chủ.");
       }
     } catch (err: any) {
       console.error("API error:", err);
       // Retrieve parsed error message from Axios interceptor
-      const errMsg = err?.message || "Không thể kết nối đến server API. Vui lòng kiểm tra lại backend Elysia!";
+      const errMsg = err?.message || "Không thể kết nối đến máy chủ. Vui lòng thử lại sau!";
+      debugger
       error.value = `Lỗi chuyển đổi: ${errMsg}`;
       return false;
     } finally {

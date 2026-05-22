@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full max-w-4xl mx-auto px-4 py-8 animate-fade-in-up">
+  <div class="w-full animate-fade-in-up">
     <!-- Premium Welcome Dashboard Card -->
     <div class="glass-panel rounded-[32px] p-8 md:p-12 shadow-2xl glow-orange text-center relative overflow-hidden transition-all duration-500 border border-slate-200/60 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/60 backdrop-blur-xl">
       <!-- Decorative background blur blobs inside the card (no purple) -->

@@ -16,12 +16,17 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
     optimizeDeps: {
-      include: ['better-auth', 'better-auth/vue']
+      include: [
+        '@vue/devtools-core',
+        '@vue/devtools-kit',
+        'better-auth',
+        'better-auth/vue'
+      ]
     }
   },
 
   build: {
-    transpile: ['better-auth']
+    transpile: ['better-auth', '@vue/devtools-core', '@vue/devtools-kit']
   },
 
   // Server-side route rules (Proxying /api calls to backend to completely bypass browser CORS)

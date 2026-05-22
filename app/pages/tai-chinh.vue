@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
+  <div class="w-full animate-fade-in">
     <!-- Page Title & Header -->
     <div class="mt-6">
       <h1 class="text-[30px] font-black tracking-tight text-slate-900 dark:text-white leading-tight">

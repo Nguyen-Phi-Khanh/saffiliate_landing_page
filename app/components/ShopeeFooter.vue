@@ -1,6 +1,6 @@
 <template>
   <footer class="hidden md:block w-full mt-auto pt-16 pb-8 border-t border-slate-100 dark:border-slate-800/60 bg-white dark:bg-slate-950 transition-colors duration-500">
-    <div class="mx-auto max-w-7xl px-6 md:px-8">
+    <div class="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
       
       <!-- TOP REGION: 3 Columns Grid -->
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 pb-12">

@@ -3,7 +3,7 @@
     <nav
       v-if="shouldShow"
       aria-label="Breadcrumb"
-      class="w-full max-w-4xl mx-auto px-4 mb-4 select-none animate-fade-in"
+      class="w-full mb-4 select-none animate-fade-in"
     >
       <ol class="flex items-center flex-wrap gap-2 rounded-2xl bg-white/50 dark:bg-slate-900/40 backdrop-blur-md border border-slate-200/50 dark:border-slate-800/60 px-4 py-2.5 shadow-sm text-xs font-bold text-slate-500 dark:text-slate-400">
         <!-- Home Page Link -->

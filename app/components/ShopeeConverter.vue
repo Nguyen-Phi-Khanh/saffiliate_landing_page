@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full max-w-2xl mx-auto px-4 py-8 animate-fade-in-up">
+  <div class="w-full animate-fade-in-up">
     <!-- Main Converter Card -->
     <div class="glass-panel rounded-3xl p-6 md:p-8 shadow-2xl glow-orange">
       <!-- Title Area inside Card -->

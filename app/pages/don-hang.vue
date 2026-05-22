@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 animate-fade-in">
+  <div class="w-full animate-fade-in">
     <!-- Page Title & Header -->
     <div class="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
       <div>

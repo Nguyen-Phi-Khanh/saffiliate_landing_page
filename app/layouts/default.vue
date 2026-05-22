@@ -8,12 +8,12 @@
     <ShopeeHeader />
 
     <!-- Main Content Area -->
-    <main class="flex-1 flex flex-col w-full py-6 md:py-10 z-10 relative">
+    <main class="flex-1 flex flex-col w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-6 md:py-10 z-10 relative">
       <!-- Dynamic Breadcrumb Navigation path -->
       <Breadcrumb />
       
       <!-- Inner page contents container -->
-      <div class="flex-1 flex flex-col items-center justify-center">
+      <div class="flex-1 flex flex-col w-full">
         <slot />
       </div>
     </main>
