@@ -1,17 +1,14 @@
 <template>
   <header 
-    class="fixed top-0 left-0 right-0 z-50 w-full px-4 transition-all duration-500 ease-out"
-    :class="[
-      isScrolled ? 'pt-2 pb-2 backdrop-blur-sm' : 'pt-4 pb-2'
-    ]"
+    class="fixed top-0 left-0 right-0 z-50 w-full px-4 pt-3.5 pb-2"
   >
     <div class="mx-auto max-w-7xl">
       <div 
-        class="transition-all duration-500 ease-out flex items-center justify-between rounded-full border shadow-xl bg-white/90 dark:bg-slate-900/90 backdrop-blur-md"
+        class="transition-[background-color,border-color,box-shadow] duration-500 ease-out flex items-center justify-between rounded-full border bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-5 py-2.5"
         :class="[
           isScrolled 
-            ? 'px-4 py-2 border-slate-200/50 dark:border-slate-800/50 shadow-slate-900/5 dark:shadow-slate-950/20' 
-            : 'px-6 py-3 border-slate-200/80 dark:border-slate-800/85 shadow-slate-900/10 dark:shadow-slate-950/30'
+            ? 'border-slate-200/50 dark:border-slate-800/50 shadow-lg shadow-slate-900/5 dark:shadow-slate-950/20' 
+            : 'border-slate-200/80 dark:border-slate-800/85 shadow-xl shadow-slate-900/10 dark:shadow-slate-950/30'
         ]"
       >
         <!-- LEFT REGION: Logo, Dashboard Switch, and Hàng Icon Điều Hướng -->
@@ -181,14 +178,6 @@
             <span>VÀNG</span>
           </div>
 
-          <!-- Link Hồ Sơ -->
-          <button class="hidden sm:flex items-center gap-1.5 text-slate-500 dark:text-slate-400 hover:text-shopee-orange dark:hover:text-shopee-orange text-xs font-bold transition-all duration-300 cursor-pointer py-1.5 px-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/60 select-none">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-            </svg>
-            <span>Hồ sơ</span>
-          </button>
-
           <!-- Light/Dark Theme Switcher (Ẩn trên mobile để tối giản theo mockup) -->
           <button
             @click="toggleTheme"
@@ -220,13 +209,13 @@
           <!-- Phân cách dọc 2 (Ẩn trên mobile) -->
           <div class="hidden sm:block h-5 w-px bg-slate-200 dark:bg-slate-800 mx-1 shrink-0"></div>
 
-          <!-- User Capsule (Better-Auth Session - tối giản không viền/nền và ẩn mũi tên trên mobile) -->
+          <!-- User Capsule (Better-Auth Session - tối giản không viền/nền và ẩn mũi tên trên mobile/tablet) -->
           <div 
             ref="capsuleRef"
             @click="toggleMenu"
-            class="flex items-center gap-2 rounded-full border border-transparent sm:border-slate-200 dark:border-transparent sm:dark:border-slate-800 bg-transparent sm:bg-slate-50/50 dark:bg-transparent sm:dark:bg-slate-900/30 p-0 sm:pl-3 sm:pr-2 sm:py-1 select-none hover:border-transparent sm:hover:border-slate-300 dark:hover:border-transparent sm:dark:hover:border-slate-700 transition-colors duration-300 shrink-0 cursor-pointer relative"
+            class="flex items-center gap-2 rounded-full border border-transparent lg:border-slate-200 dark:border-transparent lg:dark:border-slate-800 bg-transparent lg:bg-slate-50/50 dark:bg-transparent lg:dark:bg-slate-900/30 p-0 lg:pl-3 lg:pr-2 lg:py-1 select-none hover:border-transparent lg:hover:border-slate-300 dark:hover:border-transparent lg:hover:border-slate-700 transition-colors duration-300 shrink-0 cursor-pointer relative"
           >
-            <span class="hidden sm:inline text-xs font-bold text-slate-700 dark:text-slate-200 truncate max-w-[100px] md:max-w-[120px]">
+            <span class="hidden lg:inline text-xs font-bold text-slate-700 dark:text-slate-200 truncate max-w-[100px] md:max-w-[120px]">
               {{ userName }}
             </span>
             <div class="h-8.5 w-8.5 rounded-full overflow-hidden flex items-center justify-center shrink-0 shadow-sm border border-slate-200/50 dark:border-slate-800">
@@ -235,8 +224,8 @@
                 {{ firstLetter }}
               </div>
             </div>
-            <!-- Arrow Down SVG (Ẩn trên mobile) -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="hidden sm:inline h-3 w-3 text-slate-400 dark:text-slate-500 transition-transform duration-300" :class="{ 'rotate-180': isMenuOpen }" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <!-- Arrow Down SVG (Ẩn trên mobile/tablet) -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="hidden lg:inline h-3 w-3 text-slate-400 dark:text-slate-500 transition-transform duration-300" :class="{ 'rotate-180': isMenuOpen }" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
 
@@ -405,9 +394,17 @@ const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
 };
 
+let ticking = false;
+
 const handleScroll = () => {
-  if (typeof window !== "undefined") {
-    isScrolled.value = window.scrollY > 20;
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      if (typeof window !== "undefined") {
+        isScrolled.value = window.scrollY > 40;
+      }
+      ticking = false;
+    });
+    ticking = true;
   }
 };
 
@@ -424,7 +421,7 @@ const handleClickOutside = (event) => {
 };
 
 onMounted(() => {
-  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("scroll", handleScroll, { passive: true });
   window.addEventListener("click", handleClickOutside);
   // Initial check
   handleScroll();
