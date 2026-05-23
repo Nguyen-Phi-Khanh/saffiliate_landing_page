@@ -15,7 +15,7 @@
       <!-- Card 1: Khả dụng -->
       <div class="rounded-3xl border border-slate-100 dark:border-slate-800/60 bg-gradient-to-br from-shopee-orange/5 to-transparent dark:from-shopee-orange/10 dark:bg-slate-900/40 p-6 shadow-lg shadow-slate-900/[0.02] dark:shadow-slate-950/10">
         <div class="flex items-center justify-between gap-3">
-          <span class="text-[11px] font-extrabold tracking-wider text-slate-400 dark:text-slate-500 uppercase">Khả dụng rút tiền</span>
+          <span class="text-[11px] font-extrabold tracking-wider text-slate-400 dark:text-slate-500 uppercase">Số dư khả dụng</span>
           <div class="h-10 w-10 rounded-xl bg-orange-500/10 text-orange-500 flex items-center justify-center shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5.5 w-5.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -23,13 +23,13 @@
           </div>
         </div>
         <p class="text-[34px] font-black text-slate-800 dark:text-white mt-4 leading-none">{{ formatMoney(availableBalance) }}</p>
-        <p class="text-[10px] text-slate-400 dark:text-slate-500 mt-3 font-semibold">Tối thiểu rút: 50,000đ • Xử lý tự động</p>
+        <p class="text-[10px] text-slate-400 dark:text-slate-500 mt-3 font-semibold">Có thể thanh toán</p>
       </div>
 
-      <!-- Card 2: Chờ đối soát -->
+      <!-- Card 2: Chờ xử lý -->
       <div class="rounded-3xl border border-slate-100 dark:border-slate-800/60 bg-white dark:bg-slate-900/40 p-6 shadow-lg shadow-slate-900/[0.02] dark:shadow-slate-950/10">
         <div class="flex items-center justify-between gap-3">
-          <span class="text-[11px] font-extrabold tracking-wider text-slate-400 dark:text-slate-500 uppercase">Chờ đối soát</span>
+          <span class="text-[11px] font-extrabold tracking-wider text-slate-400 dark:text-slate-500 uppercase">Chờ xử lý</span>
           <div class="h-10 w-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5.5 w-5.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -37,7 +37,7 @@
           </div>
         </div>
         <p class="text-[34px] font-black text-slate-800 dark:text-white mt-4 leading-none">{{ formatMoney(pendingBalance) }}</p>
-        <p class="text-[10px] text-slate-400 dark:text-slate-500 mt-3 font-semibold">Tạm duyệt từ Shopee</p>
+        <p class="text-[10px] text-slate-400 dark:text-slate-500 mt-3 font-semibold">Chờ rút tiền</p>
       </div>
 
       <!-- Card 3: Đã thanh toán -->
@@ -51,7 +51,7 @@
           </div>
         </div>
         <p class="text-[34px] font-black text-slate-800 dark:text-white mt-4 leading-none">{{ formatMoney(totalWithdrawn) }}</p>
-        <p class="text-[10px] text-slate-400 dark:text-slate-500 mt-3 font-semibold">Tích lũy từ đầu năm</p>
+        <p class="text-[10px] text-slate-400 dark:text-slate-500 mt-3 font-semibold">Saffi đã thanh toán cho bạn</p>
       </div>
     </div>
 
@@ -228,7 +228,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, computed, onMounted } from "vue";
 
 useSeoMeta({
   title: "Tài chính & Rút tiền - SAffiliate",
@@ -239,9 +239,24 @@ useSeoMeta({
   twitterCard: "summary_large_image",
 });
 
-const availableBalance = ref(158500);
-const pendingBalance = ref(47000);
-const totalWithdrawn = ref(1220000);
+const { walletData, isLoading, error, fetchWallet } = useWallet();
+
+onMounted(() => {
+  fetchWallet();
+});
+
+const availableBalance = computed({
+  get: () => walletData.value.availableBalance,
+  set: (val) => { walletData.value.availableBalance = val; }
+});
+const pendingBalance = computed({
+  get: () => walletData.value.pendingBalance,
+  set: (val) => { walletData.value.pendingBalance = val; }
+});
+const totalWithdrawn = computed({
+  get: () => walletData.value.totalPaid,
+  set: (val) => { walletData.value.totalPaid = val; }
+});
 
 const selectedBank = ref("MB");
 const accountNumber = ref("");
