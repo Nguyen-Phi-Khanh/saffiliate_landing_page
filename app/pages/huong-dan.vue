@@ -92,10 +92,10 @@
 import { ref } from "vue";
 
 useSeoMeta({
-  title: "Hướng dẫn sử dụng - SAffiliate",
-  ogTitle: "Hướng dẫn sử dụng - SAffiliate",
-  description: "Cẩm nang hướng dẫn các bước mua hàng Shopee để được hoàn tiền tự động 100% tại SAffiliate.",
-  ogDescription: "Cẩm nang hướng dẫn các bước mua hàng Shopee để được hoàn tiền tự động 100% tại SAffiliate.",
+  title: "Hướng dẫn sử dụng - Saffi",
+  ogTitle: "Hướng dẫn sử dụng - Saffi",
+  description: "Cẩm nang hướng dẫn các bước mua hàng Shopee để được hoàn tiền tự động 100% tại Saffi.",
+  ogDescription: "Cẩm nang hướng dẫn các bước mua hàng Shopee để được hoàn tiền tự động 100% tại Saffi.",
   ogImage: "/shopee-banner.png",
   twitterCard: "summary_large_image",
 });
@@ -114,7 +114,7 @@ const steps = [
   },
   {
     title: "2. Chuyển đổi link",
-    desc: "Truy cập SAffiliate, dán link sản phẩm vừa copy vào thanh công cụ để tự động quy đổi sang link hoàn tiền.",
+    desc: "Truy cập Saffi, dán link sản phẩm vừa copy vào thanh công cụ để tự động quy đổi sang link hoàn tiền.",
     icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 6.571M21.11 3v5h-5.06",
   },
   {
@@ -132,7 +132,7 @@ const steps = [
 const faqs = [
   {
     question: "Hoàn tiền hoạt động thế nào?",
-    answer: "SAffiliate liên kết trực tiếp với Shopee Affiliate (Tiếp thị liên kết). Khi bạn mua hàng thông qua link chuyển đổi của chúng tôi, Shopee sẽ chi trả tiền hoa hồng tiếp thị cho SAffiliate. Chúng tôi trích xuất phần lớn tiền hoa hồng này (lên tới 80%) để trực tiếp hoàn lại vào tài khoản ví của bạn.",
+    answer: "Saffi liên kết trực tiếp với Shopee Affiliate (Tiếp thị liên kết). Khi bạn mua hàng thông qua link chuyển đổi của chúng tôi, Shopee sẽ chi trả tiền hoa hồng tiếp thị cho Saffi. Chúng tôi trích xuất phần lớn tiền hoa hồng này (lên tới 80%) để trực tiếp hoàn lại vào tài khoản ví của bạn.",
   },
   {
     question: "Sau bao lâu thì nhận được hoa hồng sau khi mua hàng?",

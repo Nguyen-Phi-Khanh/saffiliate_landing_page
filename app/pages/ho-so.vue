@@ -189,10 +189,10 @@ import { ref, computed } from "vue";
 import { authClient } from "@/utils/auth-client";
 
 useSeoMeta({
-  title: "Hồ sơ cá nhân - SAffiliate",
-  ogTitle: "Hồ sơ cá nhân - SAffiliate",
-  description: "Trang cấu hình và bảo mật tài khoản thành viên SAffiliate.",
-  ogDescription: "Trang cấu hình và bảo mật tài khoản thành viên SAffiliate.",
+  title: "Hồ sơ cá nhân - Saffi",
+  ogTitle: "Hồ sơ cá nhân - Saffi",
+  description: "Trang cấu hình và bảo mật tài khoản thành viên Saffi.",
+  ogDescription: "Trang cấu hình và bảo mật tài khoản thành viên Saffi.",
   ogImage: "/shopee-banner.png",
   twitterCard: "summary_large_image",
 });

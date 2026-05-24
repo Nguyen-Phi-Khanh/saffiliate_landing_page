@@ -75,7 +75,7 @@
               </svg>
             </div>
             <div class="flex flex-col">
-              <span class="text-xs font-black text-slate-800 dark:text-white leading-none">getsaffiliate@gmail.com</span>
+              <span class="text-xs font-black text-slate-800 dark:text-white leading-none">getsaffi@gmail.com</span>
               <span class="text-[9px] text-slate-400 dark:text-slate-550 mt-1 font-semibold">Đối tác & Hợp tác doanh nghiệp</span>
             </div>
           </div>
@@ -164,10 +164,10 @@
 import { ref } from "vue";
 
 useSeoMeta({
-  title: "Trung tâm hỗ trợ - SAffiliate",
-  ogTitle: "Trung tâm hỗ trợ - SAffiliate",
-  description: "Liên hệ trực tiếp với SAffiliate Team để được giải đáp và hỗ trợ kỹ thuật nhanh chóng.",
-  ogDescription: "Liên hệ trực tiếp với SAffiliate Team để được giải đáp và hỗ trợ kỹ thuật nhanh chóng.",
+  title: "Trung tâm hỗ trợ - Saffi",
+  ogTitle: "Trung tâm hỗ trợ - Saffi",
+  description: "Liên hệ trực tiếp với Saffi Team để được giải đáp và hỗ trợ kỹ thuật nhanh chóng.",
+  ogDescription: "Liên hệ trực tiếp với Saffi Team để được giải đáp và hỗ trợ kỹ thuật nhanh chóng.",
   ogImage: "/shopee-banner.png",
   twitterCard: "summary_large_image",
 });

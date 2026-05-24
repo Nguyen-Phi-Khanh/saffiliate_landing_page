@@ -6,8 +6,8 @@
 
 <script setup>
 useSeoMeta({
-  title: "Quy đổi hoàn tiền - SAffiliate",
-  ogTitle: "Quy đổi hoàn tiền - SAffiliate",
+  title: "Quy đổi hoàn tiền - Saffi",
+  ogTitle: "Quy đổi hoàn tiền - Saffi",
   description: "Công cụ chuyển đổi link sản phẩm Shopee thành link tiếp thị liên kết hoàn tiền chuyên nghiệp và nhanh chóng.",
   ogDescription: "Công cụ chuyển đổi link sản phẩm Shopee thành link tiếp thị liên kết hoàn tiền chuyên nghiệp và nhanh chóng.",
   ogImage: "/shopee-banner.png",

@@ -231,8 +231,8 @@
 import { ref, computed, onMounted } from "vue";
 
 useSeoMeta({
-  title: "Tài chính & Rút tiền - SAffiliate",
-  ogTitle: "Tài chính & Rút tiền - SAffiliate",
+  title: "Tài chính & Rút tiền - Saffi",
+  ogTitle: "Tài chính & Rút tiền - Saffi",
   description: "Trang đối soát số dư hoa hồng và làm lệnh yêu cầu thanh toán nhanh chóng.",
   ogDescription: "Trang đối soát số dư hoa hồng và làm lệnh yêu cầu thanh toán nhanh chóng.",
   ogImage: "/shopee-banner.png",

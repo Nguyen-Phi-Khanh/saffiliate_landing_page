@@ -22,7 +22,7 @@
 
       <!-- Welcome Slogan & Copy -->
       <h1 class="text-3xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight select-none mb-4 transition-colors duration-400">
-        Chào Mừng Bạn Đến Với <span class="text-shopee-orange">SAffiliate</span>
+        Chào mừng bạn đến với <span class="text-shopee-orange">Saffi</span>
       </h1>
       
       <p class="text-base md:text-lg text-slate-600 dark:text-slate-400 font-medium max-w-2xl mx-auto mb-8 leading-relaxed transition-colors duration-400">
@@ -95,10 +95,10 @@
 
 <script setup>
 useSeoMeta({
-  title: "SAffiliate - Mua Sắm Hoàn Tiền Thông Minh",
-  ogTitle: "SAffiliate - Mua Sắm Hoàn Tiền Thông Minh",
-  description: "Trang chủ hệ thống SAffiliate. Hỗ trợ mua sắm thông minh và nhận lại tiền chiết khấu hoàn tiền tự động cực kỳ nhanh chóng.",
-  ogDescription: "Trang chủ hệ thống SAffiliate. Hỗ trợ mua sắm thông minh và nhận lại tiền chiết khấu hoàn tiền tự động cực kỳ nhanh chóng.",
+  title: "Saffi - Mua Sắm & Hoàn Tiền Thông Minh",
+  ogTitle: "Saffi - Mua Sắm & Hoàn Tiền Thông Minh",
+  description: "Trang chủ hệ thống Saffi. Hỗ trợ mua sắm thông minh và nhận lại tiền chiết khấu hoàn tiền tự động cực kỳ nhanh chóng.",
+  ogDescription: "Trang chủ hệ thống Saffi. Hỗ trợ mua sắm thông minh và nhận lại tiền chiết khấu hoàn tiền tự động cực kỳ nhanh chóng.",
   ogImage: "/shopee-banner.png",
   twitterCard: "summary_large_image",
 });

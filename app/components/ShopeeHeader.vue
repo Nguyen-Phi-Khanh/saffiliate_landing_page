@@ -31,10 +31,10 @@
             <!-- Logo Text -->
             <div class="hidden sm:flex flex-col select-none">
               <span class="font-sans text-[17px] font-black tracking-tight text-slate-900 dark:text-white leading-none">
-                S<span class="text-shopee-orange">affiliate</span>
+                S<span class="text-shopee-orange">affi</span>
               </span>
               <span class="text-[7.5px] font-bold tracking-widest text-slate-400 dark:text-slate-500 uppercase mt-0.5 leading-none">
-                MUA SẮM HOÀN TIỀN
+                Smart Shopping
               </span>
             </div>
           </NuxtLink>

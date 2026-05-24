@@ -24,10 +24,10 @@
             <!-- Logo Text -->
             <div class="flex flex-col select-none">
               <span class="font-sans text-[17px] font-black tracking-tight text-slate-900 dark:text-white leading-none">
-                S<span class="text-shopee-orange">affiliate</span>
+                S<span class="text-shopee-orange">affi</span>
               </span>
               <span class="text-[7.5px] font-bold tracking-widest text-slate-400 dark:text-slate-500 uppercase mt-0.5 leading-none">
-                HỆ THỐNG HOÀN TIỀN TỰ ĐỘNG
+                Smart Shopping
               </span>
             </div>
           </div>
@@ -61,7 +61,7 @@
             </a>
             <!-- Mail Button -->
             <a 
-              href="mailto:getsaffiliate@gmail.com" 
+              href="mailto:getsaffi@gmail.com" 
               class="flex h-9 w-9 items-center justify-center rounded-full bg-slate-50 dark:bg-slate-900/60 text-slate-400 dark:text-slate-500 border border-slate-100 dark:border-slate-800/80 hover:text-shopee-orange dark:hover:text-shopee-orange hover:bg-slate-100 dark:hover:bg-slate-800 hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer shrink-0" 
               title="Gửi thư hỗ trợ"
             >
@@ -75,7 +75,7 @@
         <!-- COLUMN 2: Navigation Links (Span 3) -->
         <div class="md:col-span-3 flex flex-col gap-4">
           <span class="text-xs font-black tracking-widest text-slate-800 dark:text-slate-200 uppercase select-none">
-            SAFFILIATE
+            SAFFI
           </span>
           <div class="flex flex-col gap-3.5">
             <!-- Công cụ hoàn tiền -->
@@ -124,7 +124,7 @@
                 </svg>
               </div>
               <div class="flex flex-col select-all">
-                <span class="text-xs font-bold text-slate-700 dark:text-slate-200 leading-tight">getsaffiliate@gmail.com</span>
+                <span class="text-xs font-bold text-slate-700 dark:text-slate-200 leading-tight">getsaffi@gmail.com</span>
                 <span class="text-[10px] text-slate-400 dark:text-slate-500 mt-0.5">Email hỗ trợ</span>
               </div>
             </div>
@@ -163,7 +163,7 @@
       <!-- BOTTOM REGION: Copyright and Terms Links -->
       <div class="pt-8 border-t border-slate-100 dark:border-slate-800/60 flex flex-col md:flex-row items-center justify-between gap-4 text-left">
         <p class="text-[11px] font-bold text-slate-400 dark:text-slate-500 select-none">
-          © 2026 SAffiliate. Bản quyền dịch vụ thuộc về SAffiliate Team.
+          © 2026 Saffi. Bản quyền dịch vụ thuộc về Saffi Team.
         </p>
         <div class="flex items-center gap-4 text-[11px] font-bold text-slate-400 dark:text-slate-500">
           <a href="#" class="hover:text-shopee-orange dark:hover:text-shopee-orange transition-colors duration-300">Privacy Policy</a>
