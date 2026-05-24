@@ -53,66 +53,69 @@
         </div>
       </div>
 
-      <!-- Orders List (Neomorphic Cards - Responsive & alive) -->
-      <div class="mt-6 flex flex-col gap-4">
-        <div
-          v-for="order in filteredOrders"
-          :key="order.code"
-          class="group rounded-2xl border border-slate-100 dark:border-slate-800/60 bg-slate-50/20 dark:bg-slate-900/20 hover:bg-slate-50/50 dark:hover:bg-slate-900/40 p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-all duration-300 hover:shadow-lg hover:shadow-slate-900/[0.01]"
-        >
-          <!-- Left Info: Store & Code -->
-          <div class="flex items-start gap-3.5">
-            <!-- Icon -->
-            <div class="h-10 w-10 rounded-xl bg-orange-500/10 text-orange-500 flex items-center justify-center shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5.5 w-5.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-              </svg>
-            </div>
-            <div>
-              <div class="flex items-center gap-2 flex-wrap">
-                <span class="text-xs font-black text-slate-800 dark:text-slate-100">{{ order.storeName }}</span>
-                <span class="px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[9.5px] font-bold select-all tracking-wider">{{ order.code }}</span>
-              </div>
-              <p class="text-[10px] text-slate-400 dark:text-slate-500 mt-1 font-bold">{{ order.date }}</p>
-            </div>
-          </div>
-
-          <!-- Middle Info: Price details -->
-          <div class="flex items-center gap-6 sm:gap-12 flex-wrap sm:flex-nowrap">
-            <!-- Order Price -->
-            <div class="flex flex-col">
-              <span class="text-[9.5px] text-slate-400 dark:text-slate-500 font-extrabold uppercase tracking-wide">Giá trị mua</span>
-              <span class="text-xs font-extrabold text-slate-700 dark:text-slate-200 mt-0.5">{{ formatMoney(order.purchaseAmount) }}</span>
-            </div>
-
-            <!-- Cashback commissions -->
-            <div class="flex flex-col">
-              <span class="text-[9.5px] text-slate-400 dark:text-slate-500 font-extrabold uppercase tracking-wide">Hoàn tiền</span>
-              <span class="text-xs font-black text-shopee-orange mt-0.5">+{{ formatMoney(order.cashbackAmount) }}</span>
-            </div>
-          </div>
-
-          <!-- Right: Status and Details Button -->
-          <div class="flex items-center justify-between sm:justify-end gap-3.5 border-t sm:border-t-0 pt-3.5 sm:pt-0 border-slate-100 dark:border-slate-800/40">
-            <!-- Pill status -->
-            <span
-              class="px-3 py-1.5 rounded-full text-[10px] font-black tracking-wide uppercase select-none shrink-0"
-              :class="statusStyles[order.status]"
-            >
-              {{ order.status }}
-            </span>
-
-            <!-- Arrow button link -->
-            <button
-              type="button"
-              class="flex h-8.5 w-8.5 cursor-pointer items-center justify-center rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-400 dark:text-slate-500 hover:text-shopee-orange hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-100 dark:border-slate-85 cursor-pointer active:scale-95 transition-all duration-300"
-              title="Xem chi tiết">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4.5 w-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
+      <!-- Orders Table -->
+      <div class="mt-6" v-if="filteredOrders.length > 0">
+        <div class="overflow-x-auto bg-white dark:bg-slate-900/60 rounded-2xl border border-slate-100 dark:border-slate-800/60">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="text-[10px] uppercase tracking-widest font-bold text-slate-400 border-b border-slate-100 dark:border-slate-800">
+                <th class="p-4 pl-6 whitespace-nowrap w-[20%]">Mã đơn</th>
+                <th class="p-4 whitespace-nowrap w-[35%]">Sản phẩm</th>
+                <th class="p-4 whitespace-nowrap w-[15%]">Ngày</th>
+                <th class="p-4 text-right whitespace-nowrap w-[15%]">Tích lũy</th>
+                <th class="p-4 whitespace-nowrap text-center w-[15%]">Trạng thái</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-800/60 text-sm">
+              <tr 
+                v-for="order in filteredOrders"
+                :key="order.code"
+                class="hover:bg-slate-50/50 dark:hover:bg-slate-800/40 transition-colors"
+              >
+                <!-- Mã đơn -->
+                <td class="p-4 pl-6">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-6 h-6 rounded bg-[#ff5722]/10 text-[#ff5722] flex items-center justify-center shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 6h-2c0-2.8-2.2-5-5-5S7 3.2 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.7 0 3 1.3 3 3H9c0-1.7 1.3-3 3-3zm7 17H5V8h14v12zm-7-8c-1.7 0-3-1.3-3-3H7c0 2.8 2.2 5 5 5s5-2.2 5-5h-2c0 1.7-1.3 3-3 3z"/>
+                      </svg>
+                    </div>
+                    <span class="font-bold text-slate-700 dark:text-slate-200 text-xs">#{{ order.code }}</span>
+                  </div>
+                </td>
+                <!-- Sản phẩm -->
+                <td class="p-4">
+                  <div class="font-bold text-slate-600 dark:text-slate-300 text-[13px] truncate max-w-[280px]" :title="order.itemName || order.storeName">
+                    {{ order.itemName || order.storeName || "Sản phẩm từ Shopee" }}
+                  </div>
+                </td>
+                <!-- Ngày -->
+                <td class="p-4">
+                  <div class="text-xs text-slate-500 font-medium">
+                    {{ order.date }}
+                  </div>
+                </td>
+                <!-- Tích lũy -->
+                <td class="p-4 text-right">
+                  <div class="flex items-center justify-end gap-1.5 font-black text-emerald-500 text-[13px]">
+                    +{{ formatMoney(order.cashbackAmount) }}
+                    <span class="w-3.5 h-3.5 rounded-full border border-emerald-500/40 bg-emerald-500/10 flex items-center justify-center text-[8px] font-bold">đ</span>
+                  </div>
+                </td>
+                <!-- Trạng thái -->
+                <td class="p-4 text-center">
+                  <span 
+                    class="inline-block px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider"
+                    :class="statusStyles[order.status]"
+                  >
+                    {{ (order.status === 'Completed' || order.status === 'Thành công') ? 'HOÀN THÀNH' : order.status }}
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
 
         <!-- Empty state -->
         <div v-if="filteredOrders.length === 0" class="py-16 flex flex-col items-center justify-center text-center">
@@ -156,7 +159,6 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script setup>
@@ -197,21 +199,64 @@ const statusStyles = {
   "Đã hủy": "bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/15",
 };
 
-// Hiện tại danh sách đơn hàng đang trống (để hiển thị Empty State)
-const orders = [];
+const statusMap = {
+  pending: "Pending",
+  success: "Completed",
+  cancelled: "Cancelled"
+};
 
-const filteredOrders = computed(() => {
-  return orders.filter((order) => {
-    // 1. Filter by status tab
-    if (activeTab.value === "pending" && order.status !== "Chờ duyệt") return false;
-    if (activeTab.value === "success" && order.status !== "Thành công") return false;
-    if (activeTab.value === "cancelled" && order.status !== "Đã hủy") return false;
+const headers = useRequestHeaders(['cookie']);
+const queryParams = computed(() => ({
+  status: statusMap[activeTab.value]
+}));
 
-    return true;
-  });
+const { data: response } = await useFetch('/api/order', {
+  headers,
+  query: queryParams,
+  watch: [activeTab] // Tự động gọi lại API khi chuyển tab
 });
 
+const rawOrders = computed(() => {
+  const res = response.value;
+  if (!res) return [];
+  if (res.data && Array.isArray(res.data.data)) return res.data.data;
+  if (Array.isArray(res.data)) return res.data;
+  if (Array.isArray(res)) return res;
+  return [];
+});
+
+const mapOrder = (item) => {
+  const order = item.order || item;
+  
+  // Format date
+  let dateStr = "N/A";
+  const time = order.orderTime || order.clickTime;
+  if (time) {
+    const d = new Date(time);
+    dateStr = `${d.getDate().toString().padStart(2, '0')}/${(d.getMonth()+1).toString().padStart(2, '0')}/${d.getFullYear()} ${d.getHours().toString().padStart(2, '0')}:${d.getMinutes().toString().padStart(2, '0')}`;
+  }
+
+  // Normalize status cho UI hiển thị đẹp tiếng Việt
+  let normStatus = "Chờ duyệt";
+  const s = order.orderStatus?.toLowerCase() || "";
+  if (s.includes("thành công") || s.includes("completed")) normStatus = "Thành công";
+  else if (s.includes("hủy") || s.includes("cancelled")) normStatus = "Đã hủy";
+
+  return {
+    code: order.orderId || "N/A",
+    storeName: order.shopName || "Shopee",
+    itemName: order.itemName,
+    date: dateStr,
+    purchaseAmount: order.purchaseValue || 0,
+    cashbackAmount: order.affiliateNetCommission || 0,
+    status: normStatus
+  };
+};
+
+// Sử dụng trực tiếp orders vì Backend đã filter rồi
+const filteredOrders = computed(() => rawOrders.value.map(mapOrder));
+
 const formatMoney = (val) => {
-  return val.toLocaleString("vi-VN") + "đ";
+  return val.toLocaleString("vi-VN");
 };
 </script>

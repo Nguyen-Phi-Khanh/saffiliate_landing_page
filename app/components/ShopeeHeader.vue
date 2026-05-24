@@ -228,7 +228,14 @@
             <span class="hidden lg:inline text-xs font-bold text-slate-700 dark:text-slate-200 truncate max-w-[100px] md:max-w-[120px]">
               {{ userName }}
             </span>
-            <div class="h-8.5 w-8.5 rounded-full overflow-hidden flex items-center justify-center shrink-0 shadow-sm border border-slate-200/50 dark:border-slate-800">
+            <!-- Avatar Section: Links to Admin if User is Admin -->
+            <NuxtLink v-if="session?.user?.role === 1" to="/admin/orders" @click.stop class="h-8.5 w-8.5 rounded-full overflow-hidden flex items-center justify-center shrink-0 shadow-sm border border-slate-200/50 dark:border-slate-800 hover:scale-105 transition-transform" title="Vào trang quản trị">
+              <img v-if="userAvatar" :src="userAvatar" class="h-full w-full object-cover" referrerpolicy="no-referrer" />
+              <div v-else class="h-full w-full bg-[#EC407A] text-white font-black text-sm flex items-center justify-center uppercase select-none">
+                {{ firstLetter }}
+              </div>
+            </NuxtLink>
+            <div v-else class="h-8.5 w-8.5 rounded-full overflow-hidden flex items-center justify-center shrink-0 shadow-sm border border-slate-200/50 dark:border-slate-800">
               <img v-if="userAvatar" :src="userAvatar" class="h-full w-full object-cover" referrerpolicy="no-referrer" />
               <div v-else class="h-full w-full bg-[#EC407A] text-white font-black text-sm flex items-center justify-center uppercase select-none">
                 {{ firstLetter }}
@@ -256,7 +263,13 @@
               >
                 <!-- 1. User Info -->
                 <div class="flex items-center gap-3 pb-4 border-b border-slate-100 dark:border-slate-800/60">
-                  <div class="h-12 w-12 rounded-full overflow-hidden flex items-center justify-center shrink-0 border border-slate-100 dark:border-slate-800 shadow-sm">
+                  <NuxtLink v-if="session?.user?.role === 1" to="/admin/orders" @click="isMenuOpen = false" class="h-12 w-12 rounded-full overflow-hidden flex items-center justify-center shrink-0 border border-slate-100 dark:border-slate-800 shadow-sm hover:scale-105 transition-transform" title="Vào trang quản trị">
+                    <img v-if="userAvatar" :src="userAvatar" class="h-full w-full object-cover" referrerpolicy="no-referrer" />
+                    <div v-else class="h-full w-full bg-[#EC407A] text-white font-black text-lg flex items-center justify-center uppercase">
+                      {{ firstLetter }}
+                    </div>
+                  </NuxtLink>
+                  <div v-else class="h-12 w-12 rounded-full overflow-hidden flex items-center justify-center shrink-0 border border-slate-100 dark:border-slate-800 shadow-sm">
                     <img v-if="userAvatar" :src="userAvatar" class="h-full w-full object-cover" referrerpolicy="no-referrer" />
                     <div v-else class="h-full w-full bg-[#EC407A] text-white font-black text-lg flex items-center justify-center uppercase">
                       {{ firstLetter }}
@@ -285,6 +298,22 @@
 
                 <!-- 3. Navigation Links List -->
                 <div class="flex flex-col gap-1 py-3 border-b border-slate-100 dark:border-slate-800/60">
+                  <!-- Quản trị viên (Chỉ hiển thị nếu role là Admin) -->
+                  <NuxtLink 
+                    v-if="session?.user?.role === 1"
+                    to="/admin/orders" 
+                    @click="isMenuOpen = false"
+                    class="flex items-center gap-3 w-full p-1.5 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors duration-300 cursor-pointer select-none text-left group"
+                  >
+                    <div class="h-8.5 w-8.5 rounded-xl bg-purple-500/10 dark:bg-purple-500/15 text-purple-500 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4.5 w-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </div>
+                    <span class="text-xs font-bold text-slate-700 dark:text-slate-200 group-hover:text-purple-500 dark:group-hover:text-purple-400 transition-colors duration-300">Trang Quản Trị</span>
+                  </NuxtLink>
+
                   <!-- Hồ sơ -->
                   <NuxtLink 
                     to="/ho-so" 
