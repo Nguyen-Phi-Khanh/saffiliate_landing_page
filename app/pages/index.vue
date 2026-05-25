@@ -321,7 +321,7 @@
         <div class="relative overflow-hidden rounded-[24px] border border-slate-200/50 dark:border-slate-800 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-850 p-8 shadow-2xl flex flex-col h-[280px] text-left hover:-translate-y-2 transition-all duration-400 group">
           <!-- Card Chip / Brand mark icon representation -->
           <div class="flex items-center justify-between mb-8">
-            <div class="h-7 w-10 rounded-md bg-slate-300/40 dark:bg-slate-700/50 flex items-center justify-center text-slate-400 font-mono text-[9px]">CHIP</div>
+            <div class="h-7 w-10 rounded-md bg-slate-300/40 dark:bg-slate-700/50 flex items-center justify-center text-slate-400 font-mono text-[9px]">VIP</div>
             <span class="text-[9px] font-black tracking-widest text-slate-400 dark:text-slate-500 uppercase"><span class="text-shopee-orange">Saffi</span> Silver</span>
           </div>
 
@@ -346,7 +346,7 @@
         <!-- Gold VIP Card (Gold metallic design) -->
         <div class="relative overflow-hidden rounded-[24px] border border-amber-500/20 bg-gradient-to-br from-amber-500/[0.03] to-amber-500/[0.08] p-8 shadow-2xl flex flex-col h-[280px] text-left hover:-translate-y-2 transition-all duration-400 group">
           <div class="flex items-center justify-between mb-8">
-            <div class="h-7 w-10 rounded-md bg-amber-500/20 flex items-center justify-center text-amber-500 font-mono text-[9px]">CHIP</div>
+            <div class="h-7 w-10 rounded-md bg-amber-500/20 flex items-center justify-center text-amber-500 font-mono text-[9px]">VIP</div>
             <span class="text-[9px] font-black tracking-widest text-amber-500 uppercase"><span class="text-shopee-orange">Saffi</span> Gold</span>
           </div>
 
@@ -373,7 +373,7 @@
           <div class="absolute -top-12 -right-12 w-24 h-24 rounded-full bg-amber-500/5 blur-2xl pointer-events-none"></div>
 
           <div class="flex items-center justify-between mb-8">
-            <div class="h-7 w-10 rounded-md bg-slate-800 flex items-center justify-center text-amber-500 font-mono text-[9px]">CHIP</div>
+            <div class="h-7 w-10 rounded-md bg-slate-800 flex items-center justify-center text-amber-500 font-mono text-[9px]">VIP</div>
             <span class="text-[9px] font-black tracking-widest text-amber-500 uppercase"><span class="text-shopee-orange">Saffi</span> Obsidian</span>
           </div>
 

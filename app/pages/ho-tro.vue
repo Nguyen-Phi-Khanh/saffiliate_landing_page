@@ -268,11 +268,11 @@ const faqs = [
   },
   {
     question: "Sau bao lâu thì nhận được hoa hồng sau khi đặt mua sản phẩm?",
-    answer: "Hệ thống cập nhật hoa hồng 'Chờ duyệt' trong khoảng 5 - 15 phút kể từ lúc bạn thanh toán đặt hàng thành công trên Shopee. Tiền hoàn chính thức khả dụng để rút sau khi đơn hàng được đối soát thành công (khách hàng không bấm trả hàng/hoàn tiền).",
+    answer: "Hệ thống cập nhật hoa hồng 'Chờ duyệt' trong vòng 24h kể từ lúc bạn thanh toán đặt hàng thành công trên Shopee. Tiền hoàn chính thức khả dụng để rút sau khi đơn hàng được đối soát thành công (khách hàng không bấm trả hàng/hoàn tiền).",
   },
   {
     question: "Tại sao đơn hàng của tôi bị hủy hoặc không nhận được hoàn tiền?",
-    answer: "Đơn hàng có thể không được ghi nhận nếu bạn hủy đơn, trả hàng, hoặc sử dụng các trình duyệt bật chặn quảng cáo AdBlock làm mất cookie đối soát của Shopee. Hãy đảm bảo click link chuyển đổi và thực hiện thanh toán đặt hàng ngay lập tức.",
+    answer: "Đơn hàng có thể không được ghi nhận hoàn tiền nếu bạn hủy đơn hoặc trả hàng hoàn tiền, hoặc sử dụng các trình duyệt bật chặn quảng cáo AdBlock làm mất cookie đối soát của Shopee. Hãy đảm bảo click link chuyển đổi và đặt hàng ngay lập tức trên app Shopee sạch.Cashback có thể bị hủy từ sàn, <span class='text-shopee-orange font-bold'>Saffi</span> là trung gian nên không được cung cấp lý do cụ thể, nhưng luôn sẵn sàng gửi thông tin đối soát từ sàn cho bạn để đảm bảo hệ thống minh bạch. Vui lòng liên hệ Hỗ trợ để được cung cấp thêm thông tin.",
   },
   {
     question: "Có giới hạn số tiền rút tối thiểu không?",
