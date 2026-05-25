@@ -7,10 +7,12 @@
     <!-- Header -->
     <ShopeeHeader />
 
-    <!-- Main Content Area -->
-    <main class="flex-1 flex flex-col w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-6 md:py-10 z-10 relative">
-      <!-- Dynamic Breadcrumb Navigation path -->
-      <Breadcrumb />
+    <!-- Main Content Area: Full-Bleed for premium layouts -->
+    <main class="flex-1 flex flex-col w-full z-10 relative pb-16 md:pb-6">
+      <!-- Breadcrumb container on sub-pages -->
+      <div v-if="route.path !== '/'" class="w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 pt-6">
+        <Breadcrumb />
+      </div>
       
       <!-- Inner page contents container -->
       <div class="flex-1 flex flex-col w-full">
@@ -25,8 +27,10 @@
 
 <script setup>
 import { onMounted } from "vue";
+import { useRoute } from "vue-router";
 import { useTheme } from "@/composables/useTheme";
 
+const route = useRoute();
 const { initTheme } = useTheme();
 
 onMounted(() => {

@@ -18,29 +18,18 @@ export default defineNuxtConfig({
     optimizeDeps: {
       include: [
         '@vue/devtools-core',
-        '@vue/devtools-kit',
-        'better-auth',
-        'better-auth/vue'
+        '@vue/devtools-kit'
       ]
     }
   },
 
   build: {
-    transpile: ['better-auth', '@vue/devtools-core', '@vue/devtools-kit']
-  },
-
-  // Server-side route rules (Proxying /api calls to backend to completely bypass browser CORS)
-  routeRules: {
-    "/api/**": {
-      proxy: `${process.env.NUXT_PUBLIC_API_BASE}/**`,
-    },
+    transpile: ['@vue/devtools-core', '@vue/devtools-kit']
   },
 
   runtimeConfig: {
     public: {
-      apiBase: process.env.NUXT_PUBLIC_API_BASE, // fallback value, NUXT_PUBLIC_API_BASE in .env takes precedence
-      appURL: process.env.NUXT_PUBLIC_APP_URL,
-      vietQRApi: process.env.NUXT_PUBLIC_VIETQR_API,
+      mainAppURL: process.env.NUXT_PUBLIC_MAIN_APP_URL,
     },
   },
 
