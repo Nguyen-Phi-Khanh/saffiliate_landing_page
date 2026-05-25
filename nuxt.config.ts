@@ -39,7 +39,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiBase: process.env.NUXT_PUBLIC_API_BASE, // fallback value, NUXT_PUBLIC_API_BASE in .env takes precedence
-      appURL: process.env.NUXT_PUBLIC_APP_URL
+      appURL: process.env.NUXT_PUBLIC_APP_URL,
+      vietQRApi: process.env.NUXT_PUBLIC_VIETQR_API,
     },
   },
 

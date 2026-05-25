@@ -132,11 +132,11 @@ const steps = [
 const faqs = [
   {
     question: "Hoàn tiền hoạt động thế nào?",
-    answer: "Saffi liên kết trực tiếp với Shopee Affiliate (Tiếp thị liên kết). Khi bạn mua hàng thông qua link chuyển đổi của chúng tôi, Shopee sẽ chi trả tiền hoa hồng tiếp thị cho Saffi. Chúng tôi trích xuất phần lớn tiền hoa hồng này (lên tới 80%) để trực tiếp hoàn lại vào tài khoản ví của bạn.",
+    answer: "Saffi liên kết trực tiếp với Shopee Affiliate (Tiếp thị liên kết). Khi bạn mua hàng thông qua link chuyển đổi của chúng tôi, Shopee sẽ chi trả tiền hoa hồng tiếp thị cho Saffi. Chúng tôi trích xuất phần lớn tiền hoa hồng này (lên tới 90%) để trực tiếp hoàn lại vào tài khoản ví của bạn.",
   },
   {
     question: "Sau bao lâu thì nhận được hoa hồng sau khi mua hàng?",
-    answer: "Hệ thống sẽ cập nhật tự động hoa hồng 'Chờ duyệt' trong khoảng 5 - 20 phút kể từ lúc bạn thanh toán hoặc đặt hàng thành công trên Shopee. Tiền hoàn chính thức khả dụng để rút sau khi đơn hàng được đối soát thành công (khách hàng không bấm trả hàng hoàn tiền).",
+    answer: "Hệ thống sẽ cập nhật tự động hoa hồng 'Chờ duyệt' trong 7-14 ngày kể từ lúc bạn thanh toán hoặc đặt hàng thành công trên Shopee. Tiền hoàn chính thức khả dụng để rút sau khi đơn hàng được đối soát thành công (khách hàng không bấm trả hàng hoàn tiền).",
   },
   {
     question: "Tại sao đơn hàng của tôi bị hủy hoặc không nhận được hoàn tiền?",
@@ -144,7 +144,7 @@ const faqs = [
   },
   {
     question: "Có giới hạn số tiền rút tối thiểu không?",
-    answer: "Số tiền tối thiểu cho mỗi lần thực hiện lệnh rút tiền là 50,000đ. Hệ thống của chúng tôi cam kết phê duyệt lệnh rút tự động và chuyển tiền đến tài khoản MB Bank, Vietcombank, Techcombank,... trong vòng chưa đầy 60 phút.",
+    answer: "Số tiền tối thiểu cho mỗi lần thực hiện lệnh rút tiền là 10,000đ. Hệ thống của chúng tôi cam kết phê duyệt lệnh rút tự động và chuyển tiền đến tài khoản MB Bank, Vietcombank, Techcombank,... trong vòng chưa đầy 60 phút.",
   },
 ];
 </script>

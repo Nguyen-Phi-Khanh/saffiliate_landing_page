@@ -55,6 +55,78 @@
       </div>
     </div>
 
+    <!-- Card: Bank Account Linked Info (Screenshot style) -->
+    <div class="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-900/[0.02] mt-8 animate-fade-in">
+      <div v-if="isBankLoading" class="flex flex-col gap-4">
+        <!-- Skeleton Loading -->
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full bg-slate-100 shimmer-bg shrink-0"></div>
+            <div class="h-4 w-24 bg-slate-100 shimmer-bg rounded"></div>
+          </div>
+          <div class="h-4 w-16 bg-slate-100 shimmer-bg rounded"></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-4">
+          <div class="flex flex-col gap-2" v-for="i in 3" :key="i">
+            <div class="h-3 w-16 bg-slate-100 shimmer-bg rounded"></div>
+            <div class="h-4 w-32 bg-slate-100 shimmer-bg rounded"></div>
+          </div>
+        </div>
+      </div>
+
+      <div v-else-if="bankAccountInfo" class="w-full animate-fade-in">
+        <!-- Bank linked display -->
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full bg-slate-50 flex items-center justify-center border border-slate-100 shrink-0 text-slate-550">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5.5 w-5.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4" />
+              </svg>
+            </div>
+            <h3 class="text-sm font-black text-slate-800 leading-tight">Tài khoản</h3>
+          </div>
+          <NuxtLink to="/ho-so" class="text-xs font-bold text-shopee-orange flex items-center gap-1 hover:underline select-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+            </svg>
+            Chỉnh sửa
+          </NuxtLink>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6">
+          <div>
+            <span class="text-[10px] font-extrabold tracking-wider text-slate-400 uppercase block select-none">Ngân hàng</span>
+            <span class="text-sm font-black text-slate-800 block mt-1.5">{{ bankAccountInfo.bankName }}</span>
+          </div>
+          <div>
+            <span class="text-[10px] font-extrabold tracking-wider text-slate-400 uppercase block select-none">Số tài khoản</span>
+            <span class="text-sm font-black text-slate-800 block mt-1.5">{{ bankAccountInfo.accountNo }}</span>
+          </div>
+          <div>
+            <span class="text-[10px] font-extrabold tracking-wider text-slate-400 uppercase block select-none">Chủ tài khoản</span>
+            <span class="text-sm font-black text-slate-800 block mt-1.5 uppercase">{{ bankAccountInfo.accountName }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div v-else class="flex flex-col sm:flex-row items-center justify-between gap-4 py-2 animate-fade-in">
+        <div class="flex items-center gap-3.5 text-center sm:text-left flex-col sm:flex-row">
+          <div class="h-10 w-10 rounded-full bg-orange-500/10 text-shopee-orange flex items-center justify-center shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+          </div>
+          <div>
+            <h4 class="text-xs font-black text-slate-800">Chưa liên kết tài khoản ngân hàng đối soát</h4>
+            <p class="text-[10px] text-slate-400 mt-0.5 font-bold">Vui lòng liên kết tài khoản ngân hàng trong mục Hồ sơ để thực hiện rút tiền về tài khoản của bạn.</p>
+          </div>
+        </div>
+        <NuxtLink to="/ho-so" class="px-4 py-2 rounded-xl bg-shopee-orange text-white hover:bg-shopee-orange/95 hover:scale-[1.02] active:scale-[0.98] transition-all font-bold text-[11px] tracking-wide select-none shrink-0 shadow-md shadow-orange-500/10">
+          Liên kết ngay
+        </NuxtLink>
+      </div>
+    </div>
+
     <!-- MAIN TWO COLUMN GRID layout -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8 items-start">
       <!-- COLUMN Left: Withdraw Form (Span 7) -->
@@ -64,63 +136,35 @@
         </h2>
 
         <form @submit.prevent="handleSubmit" class="mt-6 flex flex-col gap-5">
-          <!-- 1. Bank Select -->
-          <div class="flex flex-col gap-2.5">
-            <label class="text-[11px] font-extrabold tracking-wider text-slate-400 dark:text-slate-500 uppercase">Chọn ngân hàng thụ hưởng</label>
-            <!-- Visual bank selector grid -->
-            <div class="grid grid-cols-3 sm:grid-cols-5 gap-2.5">
-              <div
-                v-for="bank in banksList"
-                :key="bank.code"
-                @click="selectedBank = bank.code"
-                class="flex flex-col items-center justify-center p-3 rounded-2xl border text-center cursor-pointer transition-all duration-300 relative select-none hover:scale-[1.02] active:scale-[0.98]"
-                :class="[
-                  selectedBank === bank.code
-                    ? 'border-shopee-orange bg-shopee-orange/[0.03] shadow-md shadow-orange-500/5'
-                    : 'border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/40 hover:border-slate-200 dark:hover:border-slate-700'
-                ]"
-              >
-                <!-- Bank logo abbreviation in text format to ensure visual consistency without images -->
-                <span 
-                  class="font-black text-xs tracking-tight"
-                  :class="[
-                    selectedBank === bank.code ? 'text-shopee-orange' : 'text-slate-600 dark:text-slate-400'
-                  ]"
-                >
-                  {{ bank.code }}
+          <!-- 1. Destination bank preview card -->
+          <div v-if="bankAccountInfo" class="p-4 rounded-2xl bg-slate-50/60 dark:bg-slate-900/40 border border-slate-100 dark:border-slate-800/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <div class="h-8 w-8 rounded-xl bg-orange-500/5 dark:bg-orange-500/10 text-shopee-orange flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4.5 w-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4" />
+                </svg>
+              </div>
+              <div class="min-w-0">
+                <span class="block text-[9px] font-extrabold uppercase text-slate-400">Rút về tài khoản đối soát mặc định</span>
+                <span class="font-black text-slate-800 dark:text-slate-200 truncate block mt-0.5">
+                  {{ bankAccountInfo.bankName }} • {{ bankAccountInfo.accountNo }}
                 </span>
-                <span class="text-[7.5px] font-bold text-slate-400 mt-1 uppercase">{{ bank.shortName }}</span>
-                <!-- Orange check dot -->
-                <div v-if="selectedBank === bank.code" class="absolute top-1.5 right-1.5 h-1.5 w-1.5 rounded-full bg-shopee-orange"></div>
               </div>
             </div>
+            <span class="font-bold text-[10px] text-slate-400 dark:text-slate-500 uppercase select-all shrink-0">
+              {{ bankAccountInfo.accountName }}
+            </span>
           </div>
 
-          <!-- 2. Account Number -->
-          <div class="flex flex-col gap-2.5">
-            <label class="text-[11px] font-extrabold tracking-wider text-slate-400 dark:text-slate-500 uppercase">Số tài khoản ngân hàng</label>
-            <input
-              v-model="accountNumber"
-              type="text"
-              required
-              placeholder="Nhập chính xác số tài khoản..."
-              class="w-full rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/40 px-4 py-3 text-xs text-slate-800 dark:text-slate-200 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-shopee-orange/20 focus:border-shopee-orange transition-all"
-            />
+          <!-- Alert error when not bank account linked -->
+          <div v-else class="p-4 rounded-2xl bg-amber-500/5 border border-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-bold flex items-center gap-2.5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+            <span>Vui lòng liên kết tài khoản ngân hàng đối soát tại trang Hồ Sơ trước khi rút tiền.</span>
           </div>
 
-          <!-- 3. Account Name -->
-          <div class="flex flex-col gap-2.5">
-            <label class="text-[11px] font-extrabold tracking-wider text-slate-400 dark:text-slate-500 uppercase">Tên tài khoản (Không dấu)</label>
-            <input
-              v-model="accountName"
-              type="text"
-              required
-              placeholder="Ví dụ: NGUYEN VAN A"
-              class="w-full rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/40 px-4 py-3 text-xs text-slate-800 dark:text-slate-200 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-shopee-orange/20 focus:border-shopee-orange transition-all uppercase"
-            />
-          </div>
-
-          <!-- 4. Withdraw Amount -->
+          <!-- 2. Withdraw Amount -->
           <div class="flex flex-col gap-2.5">
             <div class="flex items-center justify-between">
               <label class="text-[11px] font-extrabold tracking-wider text-slate-400 dark:text-slate-500 uppercase">Số tiền rút</label>
@@ -137,13 +181,16 @@
                 v-model.number="withdrawAmount"
                 type="number"
                 required
-                :min="50000"
+                :min="10000"
                 :max="availableBalance"
-                placeholder="Nhập số tiền cần rút..."
+                placeholder="Rút tối thiểu 10.000đ..."
                 class="w-full rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/40 pl-4 pr-12 py-3 text-xs font-bold text-slate-800 dark:text-slate-200 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-shopee-orange/20 focus:border-shopee-orange transition-all"
               />
               <span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 font-extrabold text-[11px]">ĐỒNG</span>
             </div>
+            <p class="text-[10px] text-slate-400 dark:text-slate-500 font-bold mt-1 select-none">
+              * Hạn mức rút tối thiểu: <span class="text-slate-600 dark:text-slate-350">10.000đ</span> • Phí chuyển khoản: <span class="text-emerald-500">Miễn phí</span>
+            </p>
           </div>
 
           <!-- Alert message if any -->
@@ -163,7 +210,7 @@
           <!-- Submit Button -->
           <button
             type="submit"
-            :disabled="isSubmitting || availableBalance < 50000"
+            :disabled="isSubmitting || availableBalance < 10000 || !bankAccountInfo"
             class="mt-3 w-full bg-shopee-orange text-white hover:bg-shopee-orange/95 hover:scale-[1.02] active:scale-[0.98] transition-all rounded-2xl py-3.5 font-bold text-xs shadow-lg shadow-orange-500/15 cursor-pointer disabled:opacity-40 disabled:hover:scale-100 disabled:cursor-not-allowed flex items-center justify-center gap-2 select-none"
           >
             <svg v-if="isSubmitting" class="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -218,8 +265,8 @@
           </div>
 
           <!-- Empty list state -->
-          <div v-if="historyList.length === 0" class="py-12 text-center text-slate-400">
-            Không có yêu cầu giao dịch nào trước đó.
+          <div v-if="historyList.length === 0" class="py-12 text-center text-slate-400 font-medium text-xs">
+            Chưa có thông tin.
           </div>
         </div>
       </div>
@@ -229,6 +276,7 @@
 
 <script setup>
 import { ref, computed, onMounted } from "vue";
+import { authClient } from "@/utils/auth-client";
 
 useSeoMeta({
   title: "Tài chính & Rút tiền - Saffi",
@@ -240,9 +288,33 @@ useSeoMeta({
 });
 
 const { walletData, isLoading, error, fetchWallet } = useWallet();
+const { data: session } = await authClient.useSession(useFetch);
+const { api } = useAppFetch();
+
+const bankAccountInfo = ref(null);
+const isBankLoading = ref(true);
+
+const fetchBankAccount = async () => {
+  if (!session.value?.user?.id) {
+    isBankLoading.value = false;
+    return;
+  }
+  isBankLoading.value = true;
+  try {
+    const res = await api.get(`/bank-account/${session.value.user.id}`);
+    if (res.data) {
+      bankAccountInfo.value = res.data;
+    }
+  } catch (err) {
+    console.error("Lỗi khi tải thông tin tài khoản ngân hàng:", err);
+  } finally {
+    isBankLoading.value = false;
+  }
+};
 
 onMounted(() => {
   fetchWallet();
+  fetchBankAccount();
 });
 
 const availableBalance = computed({
@@ -258,42 +330,14 @@ const totalWithdrawn = computed({
   set: (val) => { walletData.value.totalPaid = val; }
 });
 
-const selectedBank = ref("MB");
-const accountNumber = ref("");
-const accountName = ref("");
 const withdrawAmount = ref("");
 const isSubmitting = ref(false);
 const successMsg = ref("");
 
-const banksList = [
-  { code: "MB", shortName: "Quân Đội" },
-  { code: "VCB", shortName: "Vietcom" },
-  { code: "TCB", shortName: "Techcom" },
-  { code: "ACB", shortName: "Á Châu" },
-  { code: "BIDV", shortName: "Đầu Tư" },
-];
-
-const historyList = ref([
-  {
-    id: 1,
-    bankCode: "MB Bank",
-    account: "...2901",
-    amount: 500000,
-    date: "18/05/2026 10:14",
-    status: "Thành công",
-  },
-  {
-    id: 2,
-    bankCode: "Vietcombank",
-    account: "...0521",
-    amount: 720000,
-    date: "04/05/2026 15:30",
-    status: "Thành công",
-  },
-]);
+const historyList = ref([]);
 
 const handleSubmit = () => {
-  if (withdrawAmount.value < 50000 || withdrawAmount.value > availableBalance.value) return;
+  if (withdrawAmount.value < 10000 || withdrawAmount.value > availableBalance.value) return;
 
   isSubmitting.value = true;
   successMsg.value = "";
@@ -306,8 +350,8 @@ const handleSubmit = () => {
     // Add to history list at beginning
     historyList.value.unshift({
       id: Date.now(),
-      bankCode: selectedBank.value + " Bank",
-      account: "..." + accountNumber.value.slice(-4),
+      bankCode: (bankAccountInfo.value?.bankName || "Ngân hàng") + " Bank",
+      account: "..." + (bankAccountInfo.value?.accountNo || "").slice(-4),
       amount: withdrawAmount.value,
       date: new Date().toLocaleString("vi-VN"),
       status: "Đang xử lý",
@@ -317,8 +361,6 @@ const handleSubmit = () => {
     successMsg.value = "Yêu cầu rút tiền thành công! Hệ thống đang xử lý đối soát tự động.";
     
     // Clear form inputs
-    accountNumber.value = "";
-    accountName.value = "";
     withdrawAmount.value = "";
 
     // Clear message after 4s
