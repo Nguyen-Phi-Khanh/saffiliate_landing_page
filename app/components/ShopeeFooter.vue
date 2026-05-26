@@ -45,6 +45,8 @@
               src="/saffi_logo.png" 
               alt="Saffi Logo" 
               class="h-11 sm:h-13 md:h-15 w-auto object-contain select-none filter dark:brightness-110" 
+              loading="lazy"
+              decoding="async"
             />
           </div>
 

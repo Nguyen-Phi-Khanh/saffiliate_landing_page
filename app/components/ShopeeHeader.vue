@@ -20,6 +20,8 @@
               src="/saffi_logo.png" 
               alt="Saffi Logo" 
               class="h-11 sm:h-13 md:h-15 w-auto object-contain transition-all duration-500 group-hover:scale-[1.03] select-none filter dark:brightness-110" 
+              fetchpriority="high"
+              decoding="async"
             />
           </NuxtLink>
 

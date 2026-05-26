@@ -319,6 +319,8 @@
               src="/saffi_silver.png" 
               alt="Saffi Silver Card" 
               class="h-40 sm:h-44 w-auto object-contain drop-shadow-[0_15px_35px_rgba(148,163,184,0.3)] group-hover:scale-110 group-hover:-rotate-3 group-hover:-translate-y-1 transition-all duration-500 ease-out"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
@@ -357,6 +359,8 @@
               src="/saffi_gold.png" 
               alt="Saffi Gold Card" 
               class="h-40 sm:h-44 w-auto object-contain drop-shadow-[0_15px_35px_rgba(245,158,11,0.35)] group-hover:scale-110 group-hover:-rotate-3 group-hover:-translate-y-1 transition-all duration-500 ease-out"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
@@ -394,6 +398,8 @@
               src="/saffi_obsidian.png" 
               alt="Saffi Obsidian Card" 
               class="h-40 sm:h-44 w-auto object-contain drop-shadow-[0_15px_35px_rgba(245,158,11,0.4)] group-hover:scale-110 group-hover:-rotate-3 group-hover:-translate-y-1 transition-all duration-500 ease-out"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
