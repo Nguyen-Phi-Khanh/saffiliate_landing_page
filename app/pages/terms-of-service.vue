@@ -330,7 +330,7 @@ useSeoMeta({
   ogTitle: "Điều khoản dịch vụ & Miễn trừ trách nhiệm - Saffi",
   description: "Điều khoản sử dụng, chính sách chia sẻ hoa hồng hoàn tiền và giới hạn trách nhiệm pháp lý khi sử dụng Saffi.",
   ogDescription: "Điều khoản sử dụng, chính sách chia sẻ hoa hồng hoàn tiền và giới hạn trách nhiệm pháp lý khi sử dụng Saffi.",
-  ogImage: "/shopee-banner.png",
+  ogImage: "/saffi_logo.png",
   twitterCard: "summary_large_image",
 });
 

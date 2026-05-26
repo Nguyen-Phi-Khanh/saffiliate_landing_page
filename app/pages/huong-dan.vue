@@ -100,7 +100,7 @@ useSeoMeta({
   ogTitle: "Hướng dẫn mua sắm hoàn tiền - Saffi",
   description: "Cẩm nang hướng dẫn các bước mua hàng Shopee để được hoàn tiền tự động chiết khấu cao 100% tại hệ thống Saffi.",
   ogDescription: "Cẩm nang hướng dẫn các bước mua hàng Shopee để được hoàn tiền tự động chiết khấu cao 100% tại hệ thống Saffi.",
-  ogImage: "/shopee-banner.png",
+  ogImage: "/saffi_logo.png",
   twitterCard: "summary_large_image",
 });
 

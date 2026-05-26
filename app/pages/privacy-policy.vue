@@ -230,7 +230,7 @@ useSeoMeta({
   ogTitle: "Chính sách bảo mật dữ liệu - Saffi",
   description: "Chính sách bảo mật thông tin cá nhân và dữ liệu giao dịch đối soát hoàn tiền tự động tại hệ thống Saffi.",
   ogDescription: "Chính sách bảo mật thông tin cá nhân và dữ liệu giao dịch đối soát hoàn tiền tự động tại hệ thống Saffi.",
-  ogImage: "/shopee-banner.png",
+  ogImage: "/saffi_logo.png",
   twitterCard: "summary_large_image",
 });
 

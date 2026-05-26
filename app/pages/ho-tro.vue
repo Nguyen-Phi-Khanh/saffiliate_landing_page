@@ -246,7 +246,7 @@ useSeoMeta({
   ogTitle: "Trung tâm hỗ trợ khách hàng - Saffi",
   description: "Liên hệ trực tiếp với Saffi Team để nhận giải đáp thắc mắc và hỗ trợ kỹ thuật nhanh chóng.",
   ogDescription: "Liên hệ trực tiếp với Saffi Team để nhận giải đáp thắc mắc và hỗ trợ kỹ thuật nhanh chóng.",
-  ogImage: "/shopee-banner.png",
+  ogImage: "/saffi_logo.png",
   twitterCard: "summary_large_image",
 });
 

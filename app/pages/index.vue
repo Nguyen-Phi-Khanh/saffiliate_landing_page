@@ -531,7 +531,7 @@ useSeoMeta({
   ogTitle: "Saffi - Mua Sắm & Nhận Hoàn Tiền Thật | Chia sẻ 90% Hoa Hồng",
   description: "Mua sắm Shopee qua Saffi - nhận hoàn tiền mặt thật! Saffi chia lại cho bạn đến 60%-90% hoa hồng tiếp thị liên kết Shopee trả về. Rút tiền nhanh chóng từ 10.000đ.",
   ogDescription: "Mua sắm Shopee qua Saffi - nhận hoàn tiền mặt thật! Saffi chia lại cho bạn đến 60%-90% hoa hồng tiếp thị liên kết Shopee trả về. Rút tiền nhanh chóng từ 10.000đ.",
-  ogImage: "/shopee-banner.png",
+  ogImage: "/saffi_logo.png",
   ogType: "website",
   twitterCard: "summary_large_image",
   twitterTitle: "Saffi - Mua Sắm & Nhận Hoàn Tiền Thật | Chia sẻ 90% Hoa Hồng",
