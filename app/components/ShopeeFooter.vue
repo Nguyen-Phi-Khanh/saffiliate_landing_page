@@ -40,27 +40,12 @@
         
         <!-- COLUMN 1: Brand details & Live Status Widget (Span 4) -->
         <div class="md:col-span-4 flex flex-col gap-6">
-          <div class="flex items-center gap-2">
-            <!-- Brand Icon -->
-            <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-shopee-orange shadow-md glow-orange shrink-0">
-              <svg class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <line x1="12" y1="8" x2="12" y2="16" />
-                <path d="M16 8a6 6 0 0 0-8 0" />
-                <path d="M8 16a6 6 0 0 0 8 0" />
-                <path d="M12 6V4" />
-                <path d="M12 20v-2" />
-              </svg>
-            </div>
-            <!-- Logo Text -->
-            <div class="flex flex-col">
-              <span class="font-sans text-[17px] font-black tracking-tight text-slate-900 dark:text-white leading-none">
-                S<span class="text-shopee-orange">affi</span>
-              </span>
-              <span class="text-[7.5px] font-bold tracking-widest text-slate-400 dark:text-slate-500 uppercase mt-0.5 leading-none">
-                Smart Shopping
-              </span>
-            </div>
+          <div class="flex items-center">
+            <img 
+              src="/saffi_logo.png" 
+              alt="Saffi Logo" 
+              class="h-11 sm:h-13 md:h-15 w-auto object-contain select-none filter dark:brightness-110" 
+            />
           </div>
 
           <p class="text-slate-500 dark:text-slate-400 text-xs leading-relaxed max-w-sm font-medium">

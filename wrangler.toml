@@ -1,0 +1,6 @@
+name = "saffi"
+compatibility_date = "2024-03-25"
+pages_build_output_dir = "dist"
+
+[vars]
+NUXT_PUBLIC_MAIN_APP_URL = "https://app.saffi.vn"

@@ -116,25 +116,25 @@
     <!-- METRICS SECTION: Humble & Accurate Stats Strip -->
     <section class="w-full bg-slate-50 dark:bg-slate-900/30 border-y border-slate-100 dark:border-slate-850 py-12 px-4 sm:px-6 lg:px-8 select-none relative z-10">
       <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6 text-center">
           
           <div class="flex flex-col items-center">
-            <span class="text-3xl sm:text-5xl font-sans font-black bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent mb-1.5">15,400+</span>
+            <span class="text-3xl sm:text-4.5xl font-sans font-black bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent mb-1.5 whitespace-nowrap">100+</span>
             <h3 class="text-[9px] sm:text-[10px] font-black tracking-widest text-slate-400 dark:text-slate-500 uppercase">Đơn hàng hoàn tất</h3>
           </div>
 
           <div class="flex flex-col items-center">
-            <span class="text-3xl sm:text-5xl font-sans font-black bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent mb-1.5">284 triệu+</span>
-            <h3 class="text-[9px] sm:text-[10px] font-black tracking-widest text-slate-400 dark:text-slate-500 uppercase">Hoa hồng VND chi trả</h3>
+            <span class="text-3xl sm:text-4.5xl font-sans font-black bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent mb-1.5 whitespace-nowrap">2M+</span>
+            <h3 class="text-[9px] sm:text-[10px] font-black tracking-widest text-slate-400 dark:text-slate-500 uppercase">Hoa hồng chi trả</h3>
           </div>
 
           <div class="flex flex-col items-center">
-            <span class="text-3xl sm:text-5xl font-sans font-black bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent mb-1.5">99.8%</span>
+            <span class="text-3xl sm:text-4.5xl font-sans font-black bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent mb-1.5 whitespace-nowrap">99%</span>
             <h3 class="text-[9px] sm:text-[10px] font-black tracking-widest text-slate-400 dark:text-slate-500 uppercase">Khớp đơn tự động</h3>
           </div>
 
           <div class="flex flex-col items-center">
-            <span class="text-3xl sm:text-5xl font-sans font-black bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent mb-1.5">4,500+</span>
+            <span class="text-3xl sm:text-4.5xl font-sans font-black bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent mb-1.5 whitespace-nowrap">50+</span>
             <h3 class="text-[9px] sm:text-[10px] font-black tracking-widest text-slate-400 dark:text-slate-500 uppercase">Thành viên thông thái</h3>
           </div>
 
@@ -142,84 +142,69 @@
       </div>
     </section>
 
-    <!-- HOT DEALS SECTION: Visual shopping items with real-time cashback estimates (Replaces referral block completely) -->
-    <section class="py-16 border-b border-slate-100 dark:border-slate-850 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10 select-none">
-      <div class="text-center mb-10">
-        <span class="inline-block px-3 py-1 rounded-full bg-orange-500/10 text-shopee-orange font-black text-[9px] tracking-wider uppercase mb-3">Mô phỏng thực tế</span>
-        <h2 class="text-xl md:text-2xl font-black text-slate-900 dark:text-white leading-tight">Deal Hot Hoàn Tiền Cực Khủng</h2>
-        <p class="text-xs text-slate-550 dark:text-slate-400 font-semibold leading-relaxed mt-2">
-          Xem ngay số tiền thực tế bạn sẽ nhận lại từ <span class="bg-orange-500/10 dark:bg-orange-500/20 text-shopee-orange px-1.5 py-0.5 rounded-md border border-orange-500/20 font-bold inline-block leading-none mx-0.5">Saffi</span> khi đặt mua các sản phẩm siêu hot trên Shopee.
+    <!-- HOW IT WORKS SECTION: 3 Steps to Easy Cashback (Replaces mock deals completely) -->
+    <section class="py-20 border-b border-slate-100 dark:border-slate-850 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-10 select-none animate-fade-in">
+      <div class="text-center mb-16">
+        <span class="inline-block px-3 py-1 rounded-full bg-orange-500/10 text-shopee-orange font-black text-[9px] tracking-wider uppercase mb-3">Quy trình đơn giản</span>
+        <h2 class="text-2xl sm:text-3.5xl font-black text-slate-900 dark:text-white leading-tight uppercase">3 Bước Nhận Hoàn Tiền Siêu Tốc</h2>
+        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-bold max-w-xl mx-auto leading-relaxed mt-2 uppercase tracking-wide">
+          Mua sắm thông thái chưa bao giờ dễ dàng đến thế cùng <span class="text-shopee-orange font-extrabold">Saffi</span>.
         </p>
       </div>
 
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-        <!-- Item 1: iPhone -->
-        <div class="p-5 rounded-3xl border border-slate-200/60 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 backdrop-blur-sm shadow-sm hover:border-orange-500/25 transition-all duration-300 flex flex-col group relative overflow-hidden">
-          <div class="h-10 w-10 rounded-xl bg-orange-500/10 text-orange-500 flex items-center justify-center mb-4 shrink-0 font-sans font-black text-xs select-none">
-            IP
-          </div>
-          <h4 class="text-xs font-black text-slate-900 dark:text-white truncate mb-1">iPhone 15 Pro Max</h4>
-          <span class="text-[10px] text-slate-400 dark:text-slate-500 font-bold mb-3 line-through">28.990.000đ</span>
-          
-          <div class="mt-auto border-t border-slate-100 dark:border-slate-800/80 pt-3.5 flex items-center justify-between gap-2">
-            <div class="flex flex-col">
-              <span class="text-[8px] text-slate-400 font-bold uppercase">Hoàn Tiền <span class="text-shopee-orange font-extrabold">Saffi</span></span>
-              <span class="text-sm font-black text-emerald-500">đ2.899.000</span>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        
+        <!-- Connecting Line (Desktop only) -->
+        <div class="hidden md:block absolute top-1/2 left-20 right-20 h-0.5 bg-gradient-to-r from-orange-500/20 via-amber-500/20 to-emerald-500/20 -translate-y-10 z-0"></div>
+
+        <!-- Step 1 -->
+        <div class="p-8 rounded-[32px] border border-slate-200/60 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 backdrop-blur-sm shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col text-left relative z-10 group">
+          <div class="flex items-center justify-between mb-6">
+            <span class="text-4xl font-sans font-black bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">01</span>
+            <div class="h-10 w-10 rounded-xl bg-orange-500/10 text-orange-500 flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
             </div>
-            <a :href="mainAppURL" id="deal-cta-iphone" class="px-3 py-1.5 bg-shopee-orange text-white text-[9px] font-black uppercase rounded-lg hover:scale-105 active:scale-95 transition-all shrink-0">Mua</a>
           </div>
+          <h4 class="text-sm font-black text-slate-900 dark:text-white uppercase tracking-wider mb-2">Copy Link Shopee</h4>
+          <p class="text-[12px] sm:text-[13px] text-slate-500 dark:text-slate-400 font-semibold leading-relaxed">
+            Sao chép liên kết sản phẩm bạn yêu thích trực tiếp trên ứng dụng Shopee (hoặc bất kỳ trình duyệt nào).
+          </p>
         </div>
 
-        <!-- Item 2: AirPods -->
-        <div class="p-5 rounded-3xl border border-slate-200/60 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 backdrop-blur-sm shadow-sm hover:border-orange-500/25 transition-all duration-300 flex flex-col group relative overflow-hidden">
-          <div class="h-10 w-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center mb-4 shrink-0 font-sans font-bold text-xs select-none">
-            AP
-          </div>
-          <h4 class="text-xs font-black text-slate-900 dark:text-white truncate mb-1">Tai nghe AirPods Pro</h4>
-          <span class="text-[10px] text-slate-400 dark:text-slate-500 font-bold mb-3 line-through">4.500.000đ</span>
-          
-          <div class="mt-auto border-t border-slate-100 dark:border-slate-800/80 pt-3.5 flex items-center justify-between gap-2">
-            <div class="flex flex-col">
-              <span class="text-[8px] text-slate-400 font-bold uppercase">Hoàn Tiền <span class="text-shopee-orange font-extrabold">Saffi</span></span>
-              <span class="text-sm font-black text-emerald-500">đ450.000</span>
+        <!-- Step 2 -->
+        <div class="p-8 rounded-[32px] border border-slate-200/60 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 backdrop-blur-sm shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col text-left relative z-10 group">
+          <div class="flex items-center justify-between mb-6">
+            <span class="text-4xl font-sans font-black bg-gradient-to-r from-amber-500 to-yellow-500 bg-clip-text text-transparent">02</span>
+            <div class="h-10 w-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+              </svg>
             </div>
-            <a :href="mainAppURL" id="deal-cta-airpods" class="px-3 py-1.5 bg-shopee-orange text-white text-[9px] font-black uppercase rounded-lg hover:scale-105 active:scale-95 transition-all shrink-0">Mua</a>
           </div>
+          <h4 class="text-sm font-black text-slate-900 dark:text-white uppercase tracking-wider mb-2">Dán & Chuyển đổi</h4>
+          <p class="text-[12px] sm:text-[13px] text-slate-500 dark:text-slate-400 font-semibold leading-relaxed">
+            Mở Saffi, dán liên kết vừa copy vào ô công cụ. Hệ thống sẽ tự động chuyển đổi thành đường link hoàn tiền thông minh trong 1 giây.
+          </p>
         </div>
 
-        <!-- Item 3: Nike -->
-        <div class="p-5 rounded-3xl border border-slate-200/60 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 backdrop-blur-sm shadow-sm hover:border-orange-500/25 transition-all duration-300 flex flex-col group relative overflow-hidden">
-          <div class="h-10 w-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center mb-4 shrink-0 font-sans font-bold text-xs select-none">
-            NK
-          </div>
-          <h4 class="text-xs font-black text-slate-900 dark:text-white truncate mb-1">Nike Air Max Fly</h4>
-          <span class="text-[10px] text-slate-400 dark:text-slate-500 font-bold mb-3 line-through">3.200.000đ</span>
-          
-          <div class="mt-auto border-t border-slate-100 dark:border-slate-800/80 pt-3.5 flex items-center justify-between gap-2">
-            <div class="flex flex-col">
-              <span class="text-[8px] text-slate-400 font-bold uppercase">Hoàn Tiền <span class="text-shopee-orange font-extrabold">Saffi</span></span>
-              <span class="text-sm font-black text-emerald-500">đ384.000</span>
+        <!-- Step 3 -->
+        <div class="p-8 rounded-[32px] border border-slate-200/60 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 backdrop-blur-sm shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col text-left relative z-10 group">
+          <div class="flex items-center justify-between mb-6">
+            <span class="text-4xl font-sans font-black bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent">03</span>
+            <div class="h-10 w-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
             </div>
-            <a :href="mainAppURL" id="deal-cta-nike" class="px-3 py-1.5 bg-shopee-orange text-white text-[9px] font-black uppercase rounded-lg hover:scale-105 active:scale-95 transition-all shrink-0">Mua</a>
           </div>
+          <h4 class="text-sm font-black text-slate-900 dark:text-white uppercase tracking-wider mb-2">Mua sắm & Nhận Tiền</h4>
+          <p class="text-[12px] sm:text-[13px] text-slate-500 dark:text-slate-400 font-semibold leading-relaxed">
+            Click vào link chuyển đổi để mua hàng trên Shopee. Hoa hồng trích lại lên tới 90% sẽ được cộng vào số dư Saffi để bạn rút về tài khoản ngân hàng bất kỳ lúc nào!
+          </p>
         </div>
 
-        <!-- Item 4: MAC Lipstick -->
-        <div class="p-5 rounded-3xl border border-slate-200/60 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 backdrop-blur-sm shadow-sm hover:border-orange-500/25 transition-all duration-300 flex flex-col group relative overflow-hidden">
-          <div class="h-10 w-10 rounded-xl bg-red-500/10 text-red-500 flex items-center justify-center mb-4 shrink-0 font-sans font-bold text-xs select-none">
-            LS
-          </div>
-          <h4 class="text-xs font-black text-slate-900 dark:text-white truncate mb-1">Son Môi MAC Lipstick</h4>
-          <span class="text-[10px] text-slate-400 dark:text-slate-500 font-bold mb-3 line-through">650.000đ</span>
-          
-          <div class="mt-auto border-t border-slate-100 dark:border-slate-800/80 pt-3.5 flex items-center justify-between gap-2">
-            <div class="flex flex-col">
-              <span class="text-[8px] text-slate-400 font-bold uppercase">Hoàn Tiền <span class="text-shopee-orange font-extrabold">Saffi</span></span>
-              <span class="text-sm font-black text-emerald-500">đ97.500</span>
-            </div>
-            <a :href="mainAppURL" id="deal-cta-mac" class="px-3 py-1.5 bg-shopee-orange text-white text-[9px] font-black uppercase rounded-lg hover:scale-105 active:scale-95 transition-all shrink-0">Mua</a>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -318,77 +303,112 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
         <!-- Bronze VIP Card (Silver metallic design) -->
-        <div class="relative overflow-hidden rounded-[24px] border border-slate-200/50 dark:border-slate-800 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-850 p-8 shadow-2xl flex flex-col h-[280px] text-left hover:-translate-y-2 transition-all duration-400 group">
-          <!-- Card Chip / Brand mark icon representation -->
-          <div class="flex items-center justify-between mb-8">
-            <div class="h-7 w-10 rounded-md bg-slate-300/40 dark:bg-slate-700/50 flex items-center justify-center text-slate-400 font-mono text-[9px]">VIP</div>
-            <span class="text-[9px] font-black tracking-widest text-slate-400 dark:text-slate-500 uppercase"><span class="text-shopee-orange">Saffi</span> Silver</span>
+        <div class="relative overflow-hidden rounded-[28px] border border-slate-200/80 dark:border-slate-800 bg-gradient-to-br from-slate-50/90 via-slate-100/70 to-slate-200/80 dark:from-slate-950 dark:to-slate-900 p-6 shadow-xl dark:shadow-[0_20px_50px_rgba(0,0,0,0.3)] flex flex-col justify-between h-[390px] text-left hover:-translate-y-2.5 transition-all duration-500 group select-none">
+          <!-- Ambient lighting reflection sweep on hover -->
+          <div class="absolute inset-0 w-[150%] h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full -skew-x-12 transition-transform duration-[1.2s] ease-out group-hover:translate-x-full pointer-events-none z-20"></div>
+          
+          <!-- Category Badge Tag -->
+          <span class="absolute top-5 right-5 px-2.5 py-0.5 rounded-full text-[8.5px] font-black tracking-wider uppercase bg-slate-200/80 dark:bg-slate-800 text-slate-500 dark:text-slate-400 border border-slate-300/30 dark:border-slate-700/50 z-20">SILVER VIP</span>
+
+          <!-- Card Image Showcase -->
+          <div class="flex justify-center items-center py-4 relative z-10">
+            <!-- Radial Backlight Glow -->
+            <div class="absolute w-32 h-32 rounded-full bg-slate-300/30 dark:bg-slate-800/40 blur-2xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+            
+            <img 
+              src="/saffi_silver.png" 
+              alt="Saffi Silver Card" 
+              class="h-40 sm:h-44 w-auto object-contain drop-shadow-[0_15px_35px_rgba(148,163,184,0.3)] group-hover:scale-110 group-hover:-rotate-3 group-hover:-translate-y-1 transition-all duration-500 ease-out"
+            />
           </div>
 
-          <div class="flex-1">
+          <div class="flex-1 mt-2 relative z-10">
             <h3 class="text-base font-black text-slate-800 dark:text-white leading-none mb-1">Thành Viên Bạc</h3>
-            <span class="text-[9px] text-slate-400 dark:text-slate-500 font-extrabold uppercase">Mặc định ban đầu</span>
+            <span class="text-[9.5px] text-slate-400 dark:text-slate-500 font-extrabold uppercase tracking-wide">Mặc định ban đầu</span>
           </div>
 
           <!-- Benefits overlay -->
-          <div class="flex justify-between items-end border-t border-slate-200/60 dark:border-slate-800/80 pt-4">
+          <div class="flex justify-between items-end border-t border-slate-200/80 dark:border-slate-800/80 pt-4 relative z-10">
             <div class="flex flex-col">
-              <span class="text-[8px] text-slate-400 font-bold uppercase">Ngày Thường</span>
+              <span class="text-[8px] text-slate-400 font-bold uppercase tracking-wider">Ngày Thường</span>
               <span class="text-lg font-black text-slate-800 dark:text-white">60% Hoàn trả</span>
             </div>
             <div class="flex flex-col text-right">
-              <span class="text-[8px] text-shopee-orange font-bold uppercase">Ngày Sale</span>
+              <span class="text-[8px] text-shopee-orange font-bold uppercase tracking-wider">Ngày Sale</span>
               <span class="text-lg font-black text-shopee-orange">70% Hoàn trả</span>
             </div>
           </div>
         </div>
 
         <!-- Gold VIP Card (Gold metallic design) -->
-        <div class="relative overflow-hidden rounded-[24px] border border-amber-500/20 bg-gradient-to-br from-amber-500/[0.03] to-amber-500/[0.08] p-8 shadow-2xl flex flex-col h-[280px] text-left hover:-translate-y-2 transition-all duration-400 group">
-          <div class="flex items-center justify-between mb-8">
-            <div class="h-7 w-10 rounded-md bg-amber-500/20 flex items-center justify-center text-amber-500 font-mono text-[9px]">VIP</div>
-            <span class="text-[9px] font-black tracking-widest text-amber-500 uppercase"><span class="text-shopee-orange">Saffi</span> Gold</span>
+        <div class="relative overflow-hidden rounded-[28px] border border-amber-500/30 dark:border-amber-500/20 bg-gradient-to-br from-amber-500/[0.04] via-amber-500/[0.08] to-yellow-500/[0.03] dark:from-slate-950 dark:to-slate-900 p-6 shadow-xl dark:shadow-[0_20px_50px_rgba(245,158,11,0.05)] flex flex-col justify-between h-[390px] text-left hover:-translate-y-2.5 transition-all duration-500 group select-none">
+          <!-- Ambient lighting reflection sweep on hover -->
+          <div class="absolute inset-0 w-[150%] h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full -skew-x-12 transition-transform duration-[1.2s] ease-out group-hover:translate-x-full pointer-events-none z-20"></div>
+
+          <!-- Category Badge Tag -->
+          <span class="absolute top-5 right-5 px-2.5 py-0.5 rounded-full text-[8.5px] font-black tracking-wider uppercase bg-amber-500/10 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400 border border-amber-500/30 dark:border-amber-500/20 z-20">GOLD VIP</span>
+
+          <!-- Card Image Showcase -->
+          <div class="flex justify-center items-center py-4 relative z-10">
+            <!-- Radial Backlight Glow -->
+            <div class="absolute w-32 h-32 rounded-full bg-amber-400/30 dark:bg-amber-500/20 blur-2xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+
+            <img 
+              src="/saffi_gold.png" 
+              alt="Saffi Gold Card" 
+              class="h-40 sm:h-44 w-auto object-contain drop-shadow-[0_15px_35px_rgba(245,158,11,0.35)] group-hover:scale-110 group-hover:-rotate-3 group-hover:-translate-y-1 transition-all duration-500 ease-out"
+            />
           </div>
 
-          <div class="flex-1">
-            <h3 class="text-base font-black text-slate-800 dark:text-white leading-none mb-1">Thành Viên Vàng</h3>
-            <span class="text-[9px] text-amber-500 font-extrabold uppercase">Tối thiểu 10 đơn hàng</span>
+          <div class="flex-1 mt-2 relative z-10">
+            <h3 class="text-base font-black text-amber-600 dark:text-amber-500 leading-none mb-1">Thành Viên Vàng</h3>
+            <span class="text-[9.5px] text-amber-600/70 dark:text-amber-500/60 font-extrabold uppercase tracking-wide">Tối thiểu 10 đơn hàng</span>
           </div>
 
-          <div class="flex justify-between items-end border-t border-amber-500/10 pt-4">
+          <div class="flex justify-between items-end border-t border-amber-500/20 dark:border-amber-500/10 pt-4 relative z-10">
             <div class="flex flex-col">
-              <span class="text-[8px] text-slate-400 font-bold uppercase">Ngày Thường</span>
+              <span class="text-[8px] text-slate-400 font-bold uppercase tracking-wider">Ngày Thường</span>
               <span class="text-lg font-black text-slate-800 dark:text-white">70% Hoàn trả</span>
             </div>
             <div class="flex flex-col text-right">
-              <span class="text-[8px] text-shopee-orange font-bold uppercase">Ngày Sale</span>
+              <span class="text-[8px] text-shopee-orange font-bold uppercase tracking-wider">Ngày Sale</span>
               <span class="text-lg font-black text-shopee-orange">80% Hoàn trả</span>
             </div>
           </div>
         </div>
 
         <!-- Diamond/Obsidian Infinite VIP Card (Sleek Obsidian/Gold VIP design) -->
-        <div class="relative overflow-hidden rounded-[24px] border border-slate-800/80 bg-gradient-to-br from-slate-900 to-slate-950 p-8 shadow-2xl flex flex-col h-[280px] text-left hover:-translate-y-2 transition-all duration-400 group">
-          <!-- Holographic effect glow -->
-          <div class="absolute -top-12 -right-12 w-24 h-24 rounded-full bg-amber-500/5 blur-2xl pointer-events-none"></div>
+        <div class="relative overflow-hidden rounded-[28px] border border-amber-500/30 dark:border-amber-500/20 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 p-6 shadow-2xl dark:shadow-[0_20px_50px_rgba(245,158,11,0.06)] flex flex-col justify-between h-[390px] text-left hover:-translate-y-2.5 transition-all duration-500 group select-none">
+          <!-- Ambient lighting reflection sweep on hover -->
+          <div class="absolute inset-0 w-[150%] h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full -skew-x-12 transition-transform duration-[1.2s] ease-out group-hover:translate-x-full pointer-events-none z-20"></div>
 
-          <div class="flex items-center justify-between mb-8">
-            <div class="h-7 w-10 rounded-md bg-slate-800 flex items-center justify-center text-amber-500 font-mono text-[9px]">VIP</div>
-            <span class="text-[9px] font-black tracking-widest text-amber-500 uppercase"><span class="text-shopee-orange">Saffi</span> Obsidian</span>
+          <!-- Category Badge Tag -->
+          <span class="absolute top-5 right-5 px-2.5 py-0.5 rounded-full text-[8.5px] font-black tracking-wider uppercase bg-gradient-to-r from-amber-500/20 to-amber-600/20 text-amber-400 border border-amber-500/40 dark:border-amber-500/30 z-20">INFINITE VIP</span>
+
+          <!-- Card Image Showcase -->
+          <div class="flex justify-center items-center py-4 relative z-10">
+            <!-- Radial Backlight Glow -->
+            <div class="absolute w-32 h-32 rounded-full bg-amber-500/20 dark:bg-amber-500/10 blur-2xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+
+            <img 
+              src="/saffi_obsidian.png" 
+              alt="Saffi Obsidian Card" 
+              class="h-40 sm:h-44 w-auto object-contain drop-shadow-[0_15px_35px_rgba(245,158,11,0.4)] group-hover:scale-110 group-hover:-rotate-3 group-hover:-translate-y-1 transition-all duration-500 ease-out"
+            />
           </div>
 
-          <div class="flex-1">
+          <div class="flex-1 mt-2 relative z-10">
             <h3 class="text-base font-black text-white leading-none mb-1">Thành Viên Tinh Hoa</h3>
-            <span class="text-[9px] text-amber-500 font-extrabold uppercase">Tối thiểu 50 đơn hàng</span>
+            <span class="text-[9.5px] text-amber-500/80 font-extrabold uppercase tracking-wide">Tối thiểu 50 đơn hàng</span>
           </div>
 
-          <div class="flex justify-between items-end border-t border-slate-800 pt-4">
+          <div class="flex justify-between items-end border-t border-slate-800/80 pt-4 relative z-10">
             <div class="flex flex-col">
-              <span class="text-[8px] text-slate-400 font-bold uppercase">Ngày Thường</span>
+              <span class="text-[8px] text-slate-400 font-bold uppercase tracking-wider">Ngày Thường</span>
               <span class="text-lg font-black text-white">80% Hoàn trả</span>
             </div>
             <div class="flex flex-col text-right">
-              <span class="text-[8px] text-shopee-orange font-bold uppercase">Ngày Sale</span>
+              <span class="text-[8px] text-shopee-orange font-bold uppercase tracking-wider">Ngày Sale</span>
               <span class="text-lg font-black text-shopee-orange">90% Hoàn trả</span>
             </div>
           </div>
