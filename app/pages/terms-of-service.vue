@@ -259,7 +259,7 @@
               <h3 class="text-base font-black text-slate-950 dark:text-white uppercase tracking-wide">Điều 11. Hỗ trợ & Tiếp nhận khiếu nại</h3>
             </div>
             <p class="text-[13px] sm:text-[14px] text-slate-500 dark:text-slate-400 font-semibold leading-relaxed mb-3">
-              Mọi yêu cầu đối soát lại đơn hàng bị thất lạc, khiếu nại lệnh rút tiền hoặc các lỗi kỹ thuật phát sinh trong quá trình mua sắm vui lòng gửi về email chính thức của ban hỗ trợ: <a href="mailto:getsaffi@gmail.com" class="text-shopee-orange font-bold hover:underline">getsaffi@gmail.com</a>.
+              Mọi yêu cầu đối soát lại đơn hàng bị thất lạc, khiếu nại lệnh rút tiền hoặc các lỗi kỹ thuật phát sinh trong quá trình mua sắm vui lòng gửi về email chính thức của ban hỗ trợ: <a href="mailto:support@saffi.vn" class="text-shopee-orange font-bold hover:underline">support@saffi.vn</a>.
             </p>
             <p class="text-[13px] sm:text-[14px] text-slate-500 dark:text-slate-400 font-semibold leading-relaxed">
               Yêu cầu khiếu nại hợp lệ cần nêu rõ: Họ tên thành viên, email đăng ký tài khoản, nội dung cần đối soát kèm hình ảnh/bằng chứng giao dịch (Mã đơn hàng Shopee, lịch sử chuyển khoản...). Thời gian xử lý khiếu nại tối đa là trong vòng 07 ngày làm việc kể từ ngày tiếp nhận đủ hồ sơ hợp lệ.

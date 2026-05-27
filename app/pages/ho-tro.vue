@@ -80,7 +80,7 @@
               </svg>
             </div>
             <div class="flex flex-col">
-              <span class="text-xs font-black text-slate-800 dark:text-white leading-none">getsaffi@gmail.com</span>
+              <span class="text-xs font-black text-slate-800 dark:text-white leading-none">support@saffi.vn</span>
               <span class="text-[9px] text-slate-400 dark:text-slate-500 mt-1 font-semibold">Đối tác & Hợp tác doanh nghiệp</span>
             </div>
           </div>

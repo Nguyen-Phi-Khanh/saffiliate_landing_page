@@ -209,7 +209,7 @@
               </li>
               <li class="flex items-start gap-2.5 text-[13px] sm:text-[14px] text-slate-500 dark:text-slate-400 font-semibold leading-relaxed">
                 <span class="h-1.5 w-1.5 rounded-full bg-shopee-orange mt-2 shrink-0"></span>
-                <span>Mọi khiếu nại, yêu cầu hỗ trợ dữ liệu vui lòng gửi email về hòm thư hỗ trợ chính thức: <a href="mailto:getsaffi@gmail.com" class="text-shopee-orange font-bold hover:underline select-all">getsaffi@gmail.com</a>. Chúng tôi sẽ phản hồi và xử lý nhanh chóng trong vòng tối đa 07 ngày làm việc.</span>
+                <span>Mọi khiếu nại, yêu cầu hỗ trợ dữ liệu vui lòng gửi email về hòm thư hỗ trợ chính thức: <a href="mailto:support@saffi.vn" class="text-shopee-orange font-bold hover:underline select-all">support@saffi.vn</a>. Chúng tôi sẽ phản hồi và xử lý nhanh chóng trong vòng tối đa 07 ngày làm việc.</span>
               </li>
             </ul>
           </div>

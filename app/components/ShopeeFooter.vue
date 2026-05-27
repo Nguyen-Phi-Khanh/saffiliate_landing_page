@@ -109,7 +109,7 @@
           <!-- Direct Support Email Link -->
           <div class="flex items-center gap-2 mt-2">
             <span class="text-[10px] text-slate-400 font-bold uppercase shrink-0">Email liên hệ:</span>
-            <a href="mailto:getsaffi@gmail.com" class="text-xs font-black text-slate-900 dark:text-white hover:text-shopee-orange dark:hover:text-shopee-orange select-all transition-colors">getsaffi@gmail.com</a>
+            <a href="mailto:support@saffi.vn" class="text-xs font-black text-slate-900 dark:text-white hover:text-shopee-orange dark:hover:text-shopee-orange select-all transition-colors">support@saffi.vn</a>
           </div>
         </div>
 
